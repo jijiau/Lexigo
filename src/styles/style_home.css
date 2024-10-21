@@ -1,0 +1,61 @@
+.header-home {
+    padding-top: 20px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    position: fixed; /* Menjadikan posisi tetap di bagian atas */
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* Memastikan header berada di depan elemen lain */
+    display: flex;
+    justify-content: space-between; /* Atur jarak antara dua elemen */
+    align-items: center; /* Agar vertikal sejajar */
+    border-bottom: 3px solid #333; /* Menambahkan garis bawah pada header */
+    padding-bottom: 20px; /* Menambahkan jarak antara navbar dan elemen di bawahnya */
+}
+
+/* Container utama untuk landing page */
+.landing-container {
+    padding-top: 50px; /* Memberikan jarak dari fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../assets/Landingpage.svg');
+    color: white;
+}
+
+/* Flexbox untuk konten gambar di kiri, teks dan tombol di kanan */
+.landing-content {
+    display: flex;
+    align-items: center; /* Memastikan gambar dan konten berada di tengah secara vertikal */
+    justify-content: flex-start; /* Gambar di sebelah kiri, teks dan tombol di sebelah kanan */
+    width: 90%;
+    max-width: 1200px; /* Maksimal lebar untuk menjaga responsivitas */
+    margin: 0 auto;
+}
+
+/* Styling untuk gambar di kiri */
+.left-image {
+    width: 500px; /* Sesuaikan ukuran gambar */
+    max-width: 100%; /* Agar responsif */
+    height: auto;
+    margin-right: 20px; /* Jarak antara gambar dan konten */
+}
+
+/* Container untuk teks dan tombol secara vertikal */
+.text-button-container {
+    display: flex;
+    flex-direction: column; /* Mengatur teks dan tombol secara vertikal */
+    align-items: flex-start; /* Rata kiri */
+    gap: 10px; /* Jarak antara teks dan tombol */
+}
+
+/* Styling untuk teks */
+.text-button-container h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: white;
+}

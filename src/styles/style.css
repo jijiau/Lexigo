@@ -1,0 +1,810 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Baloo+2:wght@400;700&display=swap');
+
+/* Reset margin, padding, dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pengaturan umum untuk body */
+body, a, p {
+    font-family: 'Assistant', sans-serif;
+    color: #4B4B4B;
+    font-size: medium;
+    font-weight: 600;
+}
+
+/* Heading styling */
+h1, h2 {
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Header styling */
+.header {
+    background-color: #EAAD49;
+    padding: 5px 15px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    position: fixed; /* Menjadikan posisi tetap di bagian atas */
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* Memastikan header berada di depan elemen lain */
+    display: flex;
+    justify-content: space-between; /* Atur jarak antara dua elemen */
+    align-items: center; /* Agar vertikal sejajar */
+}
+
+/* Container utama untuk landing page */
+.landing-container {
+    padding-top: 50px; /* Memberikan jarak dari fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../assets/Landingpage.svg');
+    color: white;
+}
+
+/* Flexbox untuk konten gambar di kiri, teks dan tombol di kanan */
+.landing-content {
+    display: flex;
+    align-items: center; /* Memastikan gambar dan konten berada di tengah secara vertikal */
+    justify-content: flex-start; /* Gambar di sebelah kiri, teks dan tombol di sebelah kanan */
+    width: 90%;
+    max-width: 1200px; /* Maksimal lebar untuk menjaga responsivitas */
+    margin: 0 auto;
+}
+
+/* Styling untuk gambar di kiri */
+.left-image {
+    width: 500px; /* Sesuaikan ukuran gambar */
+    max-width: 100%; /* Agar responsif */
+    height: auto;
+    margin-right: 20px; /* Jarak antara gambar dan konten */
+}
+
+/* Container untuk teks dan tombol secara vertikal */
+.text-button-container {
+    display: flex;
+    flex-direction: column; /* Mengatur teks dan tombol secara vertikal */
+    align-items: flex-start; /* Rata kiri */
+    gap: 10px; /* Jarak antara teks dan tombol */
+}
+
+/* Styling untuk teks */
+.text-button-container h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+/* Navbar untuk link */
+
+.header-home {
+    padding-top: 10px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    position: fixed; /* Menjadikan posisi tetap di bagian atas */
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* Memastikan header berada di depan elemen lain */
+    display: flex;
+    justify-content: space-between; /* Atur jarak antara dua elemen */
+    align-items: center; /* Agar vertikal sejajar */
+    border-bottom: 3px solid #bebebe; /* Menambahkan garis bawah pada header */
+    padding-bottom: 10px; /* Menambahkan jarak antara navbar dan elemen di bawahnya */
+    background-color: white;
+}
+
+.header-home h1{
+    font-size: 20px;
+    color: #39B54A;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    padding-right: 50px;
+}
+
+nav a {
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #84D8FF; /* Border biru di sekitar navbar */
+    color: rgb(117, 116, 116);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #DDF4FF;
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+/* Styling untuk ikon di dalam link navbar */
+nav a img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+/* Styling untuk tombol */
+.btn {
+    padding: 10px 20px;
+    background-image: url('../../assets/btn.svg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Assistant', sans-serif;
+    transition: background-color 0.3s ease;
+    font-weight: 900;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect untuk tombol */
+.btn:hover {
+    background-image: url('../../assets/btn-click.svg');
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+/* Styling untuk card-container */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../assets/titik-titik.svg');
+    color: white;
+    width: 130%;
+    padding-left: -50px;
+}
+
+
+.card-container h2{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    color: #4B4B4B;
+    margin-top: -100px; /* Naikkan posisi h2 dengan margin negatif */
+}
+
+/* Styling umum untuk card */
+.card {
+    width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.card:hover{
+    transform: scale(1.05); /* Card akan sedikit membesar, 5% lebih besar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Tambahkan shadow agar card terlihat lebih menonjol */ 
+}
+
+/* Styling untuk checkbox dalam card */
+.card-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+/* Style untuk checkbox */
+.card-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Menambahkan jarak antara checkbox dan konten card */
+    cursor: pointer;
+}
+
+/* Card warna hijau untuk Read */
+.card-green {
+    background-color: #39B54A;
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara gambar dan card */
+    
+}
+
+.card-image {
+    width: 200px;
+    height: 170px;
+}
+
+/* Card warna kuning untuk Speaking */
+.card-yellow {
+    background-color: #FFC107;
+}
+
+/* Konten dalam card (teks) */
+.card-content h3 {
+    font-size: 30px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-content p {
+    font-family: 'Assistant', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+/* Styling untuk tombol "START" dan ikon bintang */
+.card-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-start {
+    background-color: white;
+    color: #39B54A;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk gambar bintang */
+.card-action img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan animasi pada hover */
+    
+}
+
+/* Hover effect untuk gambar saja */
+.card-action img:hover {
+    transform: scale(1.2); /* Zoom gambar saat di-hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow pada gambar saat di-hover */
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 70px auto 0;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(0.1, 0.1, 0.1, 0.1);
+    align-items: center;
+}
+
+.profile-container h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    align-items: center;
+    color: #58CC02;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.profile-image-container {
+    position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#profileImage {
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #4B4B4B; /* Memberikan frame di sekitar gambar */
+    align-items: center;
+}
+
+.bintang{
+    width: 50px;
+    height: 50px;
+}
+/* Styling untuk input file */
+.profile-group {
+    color: black;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen dalam kolom vertikal */
+    align-items: center;    /* Memusatkan konten di dalam div */
+    text-align: center;     /* Memastikan teks juga berada di tengah */
+}
+
+input[type="file"] {
+    margin-top: 1px; /* Beri jarak antar elemen */
+}
+
+small {
+    margin-top: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-group input[type="file"]{
+    align-items: left; /* Pusatkan elemen secara horizontal */
+    text-align: left; /* Pastikan teks berada di tengah */
+    color: black;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    font-family: 'Assistant', sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: #777;
+}
+
+.extra-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Actions (Logout and Delete) */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.logout {
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-account {
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.logout:hover,
+.delete-account:hover {
+    text-decoration: underline;
+}
+
+/* Button Disabled Styling */
+button[disabled] {
+    background-color: #ccc;
+    color: white;
+    cursor: not-allowed;
+}
+
+.profile-info{
+    margin-left: 50px;
+}
+
+.profile-content {
+    display: flex; /* Menggunakan Flexbox untuk mengatur elemen secara horizontal */
+    flex-direction: column; /* Mengatur elemen menjadi satu kolom vertikal */
+    align-items: flex-start; /* Memastikan elemen rata kiri */
+    margin-bottom: 20px;
+}
+
+.profile-content p {
+    font-size: 14px;
+}
+
+.profile-content span {
+    font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+/* Profile actions for editing */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-actions a {    
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Quiz*/
+.quiz-container {
+    color: F7F7F7;
+    position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+/* Sidebar (Timer and Question Numbers) */
+
+.sidebar {
+    width: 200px;
+    background-color: white; /* Background color for the sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 8px;
+    margin-top: -200px;
+}
+
+.timer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timer p {
+    color: black;
+    font-size: 14px;
+}
+
+.timer h1 {
+    color: #39B54A;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.question-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.question-numbers .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #39B54A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question-numbers .btn.wrong {
+    background-color: #FF7676;
+}
+
+.question-numbers .btn.active {
+    background-color: #FFD700;
+}
+
+/* Feedback Container (hidden by default) */
+.feedback-container {
+    display: none; /* Initially hidden */
+    background-color: #EAF9E5;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    color: #4CAF50;
+}
+
+.feedback-message {
+    display: flex;
+    align-items: center;
+}
+
+.feedback-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.icon-check {
+    width: 24px;
+    height: 24px;
+    background-color: #39B54A;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Continue Button */
+.continue-btn {
+    background-color: #39B54A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Main Content (Question and Answer Section) */
+.main-content {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    background-color: #E5E5E5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 70%; /* Progress of the quiz */
+    background-color: #00BFFF;
+    border-radius: 4px;
+}
+
+.question-text {
+    margin-bottom: 20px;
+}
+
+.question-text p{
+    font-family: 'Assistant', sans-serif;
+    text-align: justify;
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight:normal;
+}
+
+.question-text h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Answer Options */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer {
+    font-family: 'Assistant', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.answer .letter {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.answer.clicked {
+    background-color: #FFC107;
+}
+
+/* Ketika tombol di-click, efek hover dinonaktifkan */
+.answer.clicked:hover {
+    background-color: #FFC107;
+}
+
+.answer:hover{
+    background-color: #FFEB3B;
+}
+
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-skip {
+    padding: 10px 20px;
+    background-image: url('../../assets/btn-white.svg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Assistant', sans-serif;
+    transition: background-color 0.3s ease;
+    font-weight: 900;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* --- auth ---*/
+.login-box {
+    background-color: #003566;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    color: #FFF8C6;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    align-items: center;   
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Forgot Password and Buttons */
+.forgot-password {
+    font-family: 'Assistant', sans-serif;
+    color: white;
+    font-size: 14px;
+    cursor: default; /* Menghindari pointer cursor */
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.google-sign-in {
+    font-family: 'Assistant', sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer; 
+    font-weight: bold;
+
+    /* Flexbox untuk memastikan teks dan gambar berada di tengah */
+    display: flex;
+    align-items: center; /* Menyelaraskan gambar dan teks secara vertikal */
+    justify-content: center; /* Menyelaraskan gambar dan teks secara horizontal */
+}
+
+.google-sign-in img {
+    margin-right: 10px;
+    width: 20px; /* Ukuran gambar bisa diatur sesuai kebutuhan */
+    height: 20px; /* Ukuran gambar bisa diatur sesuai kebutuhan */
+}
+
+
+/* Styling for "Register Now" link */
+.register-link {
+    font-family: 'Assistant', sans-serif;
+    color: #39B54A; /* Warna hijau untuk Register link */
+    font-weight: bold;
+    font: 0.5em;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+/* Responsif */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .landing-content {
+        flex-direction: column; /* Agar gambar dan konten bertumpuk pada layar kecil */
+        text-align: center;
+    }
+
+    .left-image {
+        margin-right: 0;
+        margin-bottom: 20px; /* Jarak antara gambar dan teks di layar kecil */
+    }
+
+    .text-button-container {
+        align-items: center; /* Rata tengah pada layar kecil */
+    }
+}
