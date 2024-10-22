@@ -85,7 +85,7 @@ h1, h2 {
 /* Navbar untuk link */
 
 .header-home {
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 50px;
     text-align: left;
     font-size: 20px;
@@ -98,7 +98,7 @@ h1, h2 {
     justify-content: space-between; /* Atur jarak antara dua elemen */
     align-items: center; /* Agar vertikal sejajar */
     border-bottom: 3px solid #bebebe; /* Menambahkan garis bawah pada header */
-    padding-bottom: 10px; /* Menambahkan jarak antara navbar dan elemen di bawahnya */
+    padding-bottom: 20px; /* Menambahkan jarak antara navbar dan elemen di bawahnya */
     background-color: white;
 }
 
@@ -107,31 +107,43 @@ h1, h2 {
     color: #39B54A;
 }
 
+/* <!-- HTML !-->
+<button class="button-33" role="button">Button 33</button> */
+
+/* CSS */
+
 nav {
     display: flex;
     gap: 10px;
     padding-right: 50px;
+    align-items: center; /* Rata tengah vertikal */
 }
 
 nav a {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
     font-family: 'Baloo 2', cursive;
-    display: flex;
-    align-items: center;
-    padding: 5px 10px 5px 10px;
-    border-radius: 8px;
-    background-color: white;
-    border: 2px solid #84D8FF; /* Border biru di sekitar navbar */
-    color: rgb(117, 116, 116);
+    padding: 7px 20px;
+    display: flex; /* Menggunakan flexbox di dalam link */
+    align-items: center; /* Rata tengah vertikal untuk konten di dalam link */
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
     font-size: 14px;
     font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
-
+  
 nav a:hover {
-    background-color: #DDF4FF;
-    transform: scale(1.05); /* Sedikit zoom saat hover */
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
 }
 
 /* Styling untuk ikon di dalam link navbar */
@@ -142,29 +154,80 @@ nav a img {
 }
 
 /* Styling untuk tombol */
+
+/* <!-- HTML !-->
+<button class="button-19" role="button">Button 19</button> */
+
+/* CSS */
 .btn {
-    padding: 10px 20px;
-    background-image: url('../../assets/btn.svg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
+    appearance: button;
     font-family: 'Assistant', sans-serif;
-    transition: background-color 0.3s ease;
-    font-weight: 900;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    background-color: #58A700;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
-/* Hover effect untuk tombol */
-.btn:hover {
-    background-image: url('../../assets/btn-click.svg');
-    transform: scale(1.05); /* Sedikit zoom saat hover */
+.btn:after {
+  background-clip: padding-box;
+  background-color: #58CC02;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+
+.btn:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+#sign-in-btn{
+    width: 100%;
 }
 
 /* Styling untuk card-container */
@@ -185,7 +248,7 @@ nav a img {
 .card-container h2{
     text-align: center;
     font-size: 50px;
-    padding-top: 30px;
+    padding-top: 70px;
     color: #4B4B4B;
     margin-top: -100px; /* Naikkan posisi h2 dengan margin negatif */
 }
@@ -495,6 +558,10 @@ button[disabled] {
     margin-top: -200px;
 }
 
+.sidebar.listen {
+    margin: 20px;
+}
+
 .timer {
     text-align: center;
     margin-bottom: 30px;
@@ -518,70 +585,132 @@ button[disabled] {
     gap: 10px;
     justify-content: center;
 }
+/* 
+<!-- HTML !-->
+<button class="button-1" role="button">Button 1</button> */
 
-.question-numbers .btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
-    background-color: #39B54A;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+/* CSS */
+.question-numbers .button {
+  background-color: #89E219;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.question-numbers .btn.wrong {
+.question-numbers .button:hover {
+  background-color: #b7f082;
+}
+
+.question-numbers .button.current {
+    background-color: #b7f082;
+}
+
+.question-numbers .button.wrong {
     background-color: #FF7676;
 }
 
-.question-numbers .btn.active {
+.question-numbers .button.wrong:hover,
+.question-numbers .button.wrong:focus {
+  background-color: #ff7676ab;
+}
+
+
+.question-numbers .button.active {
     background-color: #FFD700;
 }
 
+.question-numbers .button.active:hover,
+.question-numbers .button.active:focus {
+  background-color: #FFD700ab;
+}
+
 /* Feedback Container (hidden by default) */
+/* Feedback Container Styles */
 .feedback-container {
-    display: none; /* Initially hidden */
-    background-color: #EAF9E5;
-    padding: 20px;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    justify-content: space-between;
-    align-items: center;
-    color: #4CAF50;
+    display: flex;
+    padding: 20px;
+    z-index: 999;
+    justify-content: space-between; /* Space between feedback-content and button */
+    align-items: center; /* Align items vertically */
+    background-color: #CCFFCC; /* Example color, adjust as needed */
+    transform: translateY(100%); /* Awalnya tersembunyi di luar layar */
+    transition: transform 0.5s ease-in-out;
+}
+
+.feedback-container.active {
+    transform: translateY(0); /* Muncul dari bawah ke atas */
+}
+
+.feedback-wrapper {
+    display: flex; /* Mengatur konten dan    tombol agar sejajar horizontal */
+    justify-content: space-around; /* Memberi spasi antara konten feedback dan tombol continue */
+    align-items: center; /* Rata tengah secara vertikal */
+    width: 100%; /* Bisa disesuaikan jika perlu */
+}
+
+.feedback-content {
+    display: flex;
+    align-items: center; /* Agar ikon dan pesan rata tengah vertikal */
+}
+
+.feedback-icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
 }
 
 .feedback-message {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .feedback-text {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    margin-left: 10px;
+    color: #489D26; /* Hijau gelap untuk teks Nice! */
+    margin: 0;
 }
 
-.icon-check {
-    width: 24px;
-    height: 24px;
-    background-color: #39B54A;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-/* Continue Button */
-.continue-btn {
-    background-color: #39B54A;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+.report {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #489D26; /* Warna hijau gelap untuk report */
+    text-decoration: underline;
     cursor: pointer;
-    font-weight: bold;
+    text-align: left;
 }
 
+.btn.continue {
+    font-size: 13px;
+}
+
+.btn.continue:hover {
+    font-size: 13px;
+}
 
 /* Main Content (Question and Answer Section) */
 .main-content {
@@ -602,20 +731,104 @@ button[disabled] {
 
 .progress {
     height: 100%;
-    width: 70%; /* Progress of the quiz */
+    width: 90%; /* Progress of the quiz */
     background-color: #00BFFF;
     border-radius: 4px;
+}
+
+/* CSS */
+.listen-btn {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.400rem - 1px) calc(1rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.soal {
+    display: flex; /* Menggunakan Flexbox untuk pengaturan elemen secara horizontal */
+    justify-content:center; /* Elemen-elemen akan diratakan di tengah secara horizontal */
+    width: 100%;
+    align-items: center; /* Elemen-elemen akan diratakan di tengah secara vertikal */
+    
+}
+
+.hiasan img {
+    height: 200px;
+}
+
+.listen-btn:hover,
+.listen-btn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.listen-btn:hover {
+  transform: translateY(-1px);
+}
+
+.listen-btn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.listen-btn img {
+    margin-right: 5px; /* Memberikan jarak antara gambar dan teks */
+    height: 15px;
+}
+
+.listen-btn span {
+    font-family: 'Assistant', sans-serif;
+    margin-left: 5px; /* Jika teks dibungkus dalam elemen span */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.question-header{
+    font-size: 20px;
+    text-align: left;
 }
 
 .question-text {
     margin-bottom: 20px;
 }
 
+.question-text.listening {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
 .question-text p{
     font-family: 'Assistant', sans-serif;
     text-align: justify;
     font-size: 17px;
-    margin-bottom: 20px;
     font-weight:normal;
 }
 
@@ -648,6 +861,15 @@ button[disabled] {
     text-align: left;
 }
 
+
+
+.answer.disabled:hover {
+    background-color: inherit; /* Revert to original background color */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+    background-color: #ccc;
+    /* Remove any other hover effects like box-shadow, border changes, etc. */
+}
+
 .answer .letter {
     width: 30px;
     height: 30px;
@@ -670,7 +892,55 @@ button[disabled] {
 }
 
 .answer:hover{
-    background-color: #FFEB3B;
+    background-color: #ffc10760;
+}
+
+.answer-box {
+    border: 2px dashed #333;
+    padding: 20px;
+    min-height: 50px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.answer-options.Listening {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-options.Listening .answer {
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    cursor: grab;
+}
+
+.btn.undo {
+    margin-top: 20px;
+    background-color: #FFCC00;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+.answer-options.Listening .answer:active {
+    cursor: grabbing;
 }
 
 /* Navigation Buttons */
@@ -680,24 +950,17 @@ button[disabled] {
     margin-top: 20px;
 }
 
-.btn-skip {
-    padding: 10px 20px;
-    background-image: url('../../assets/btn-white.svg');
-    background-size: cover;
-    background-position: center;
-    color: black;
+.btn.skip:after {
+    background-color: white;
+}
 
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: 'Assistant', sans-serif;
-    transition: background-color 0.3s ease;
-    font-weight: 900;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.btn.skip{
+    color: black;
+    font-size: 12px;
+}
+
+.btn.check{
+    font-size: 12px;
 }
 
 
@@ -753,7 +1016,8 @@ button[disabled] {
     background-color: white;
     color: #333;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    height: 50px;
     font-size: 1em;
     margin-top: 10px;
     cursor: pointer; 

@@ -15,16 +15,16 @@
                 <h1>00:20:35</h1>
             </div>
             <div class="question-numbers">
-                <button class="btn active">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">4</button>
-                <button class="btn wrong">5</button>
-                <button class="btn">6</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">10</button>
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">4</button>
+                <button class="button wrong">5</button>
+                <button class="button">6</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button current">10</button>
             </div>
         </div>
 
@@ -44,11 +44,11 @@
             <!-- Answer Options -->
             <div class="answer-options">
                 <button class="answer">
-                    <span class="letter">A</span>
+                    <span class="letter" data-correct="true">A</span>
                     the earliest textiles
                 </button>
                 <button class="answer">
-                    <span class="letter">B</span>
+                    <span class="letter">B</span>   
                     how textiles were made
                 </button>
                 <button class="answer">
@@ -65,26 +65,32 @@
                 </button>
             </div>
 
-            <script src="../scripts/click_answer.js"></script>
-
-
             <!-- Navigation Buttons -->
             <div class="navigation">
-                <button class="btn-skip">Skip</button>
-                <button class="btn">Check</button>
-            </div>
-        </div>
-        <!-- Footer for Feedback (initially hidden) -->
-        <div class="feedback-container" id="feedback">
-            <div class="feedback-content">
-                <div class="feedback-message">
-                    <i class="icon-check"></i>
-                    <p class="feedback-text">Nice!</p>
-                </div>
-                <button class="continue-btn" onclick="continueQuiz()">Continue</button>
+                <button class="btn skip">Skip</button>
+                <button class="btn check">Check</button>
             </div>
         </div>
 
-    </div>
+        <!-- Footer for Feedback (initially hidden) -->
+        <div class="feedback-container" id="feedback" style="display: none;">
+            <div class="feedback-wrapper">
+                <div class="feedback-content">
+                    <div class="feedback-icon">
+                        <!-- Icon (image) will be dynamically inserted here -->
+                    </div>
+                    <div class="feedback-message">
+                        <p class="feedback-text"></p> <!-- Teks feedback ("Nice!" atau "Nice Try!") -->
+                        <p class="report">Report</p> <!-- Report link -->
+                    </div>
+                </div>
+                <a href="home.html" class="btn continue" onclick="continueQuiz()">Finish</a> <!-- Continue button -->
+            </div>
+        </div>   
+        
+    </div>  
+    <!-- Load JavaScript files -->
+    <script src="../scripts/click_answer.js"></script>
+    <script src="../scripts/check_answer.js"></script>
 </body>
 </html>
