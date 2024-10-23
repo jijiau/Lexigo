@@ -361,20 +361,20 @@ nav a img {
 .card-action img {
     width: 80px;
     height: 80px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan animasi pada hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     
 }
 
 /* Hover effect untuk gambar saja */
 .card-action img:hover {
-    transform: scale(1.2); /* Zoom gambar saat di-hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow pada gambar saat di-hover */
+    transform: scale(1.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
+
+/* VIEW PROFILE PAGE */
 .profile-container {
     max-width: 500px;
-    /* display: flex;
-    flex-direction: column; */
     flex-wrap: wrap;
     margin: 70px auto 0;
     margin-bottom: 10px;
@@ -401,7 +401,7 @@ nav a img {
 }
 
 .profile-image-container {
-    position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
+    position:relative; 
     align-items: center;
     display: flex;
     justify-content: center;
@@ -409,11 +409,11 @@ nav a img {
 }
 
 #profileImage {
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border-radius: 50%; 
     object-fit: cover;
     width: 100px;
     height: 100px;
-    border: 2px solid #4B4B4B; /* Memberikan frame di sekitar gambar */
+    border: 2px solid #4B4B4B; 
     align-items: center;
 }
 
@@ -421,17 +421,19 @@ nav a img {
     width: 50px;
     height: 50px;
 }
+
+/* EDIT PROFILE PAGE */
 /* Styling untuk input file */
 .profile-group {
     color: black;
     display: flex;
-    flex-direction: column; /* Menyusun elemen dalam kolom vertikal */
-    align-items: center;    /* Memusatkan konten di dalam div */
-    text-align: center;     /* Memastikan teks juga berada di tengah */
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;     
 }
 
 input[type="file"] {
-    margin-top: 1px; /* Beri jarak antar elemen */
+    margin-top: 1px; 
 }
 
 small {
@@ -566,6 +568,7 @@ button[disabled] {
     transition: background-color 0.3s ease;
 }
 
+/* READING PAGE */
 /* Quiz*/
 .quiz-container {
     color: F7F7F7;
@@ -673,6 +676,7 @@ button[disabled] {
   background-color: #FFD700ab;
 }
 
+/* FEEDBACK FOOTER */
 /* Feedback Container (hidden by default) */
 /* Feedback Container Styles */
 .feedback-container {
@@ -684,25 +688,25 @@ button[disabled] {
     display: flex;
     padding: 20px;
     z-index: 999;
-    justify-content: space-between; /* Space between feedback-content and button */
-    align-items: center; /* Align items vertically */
-    background-color: #CCFFCC; /* Example color, adjust as needed */
-    transform: translateY(100%); /* Awalnya tersembunyi di luar layar */
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #CCFFCC; 
+    transform: translateY(100%); 
     transition: transform 0.5s ease-in-out;
 }
 
 .feedback-container.active {
-    transform: translateY(0); /* Muncul dari bawah ke atas */
+    transform: translateY(0); 
 }
 
 .feedback-wrapper {
     display: flex;
     padding-top: 25px;
 
-    flex-direction: row; /* Mengatur dalam 1 baris (2 kolom) */
-    justify-content: space-around; /* Ruang antara kolom feedback dan tombol */
-    align-items: center; /* Rata tengah secara vertikal */
-    width: 100%; /* Lebar penuh untuk wrapper */
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center; 
+    width: 100%;
 }
 
 .feedback-content {
@@ -758,6 +762,7 @@ button[disabled] {
     margin: 20px;
 }
 
+
 .progress-bar {
     height: 8px;
     width: 100%;
@@ -773,7 +778,97 @@ button[disabled] {
     border-radius: 4px;
 }
 
-/* CSS */
+/* Answer Options */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer {
+    font-family: 'Assistant', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.answer.disabled:hover {
+    background-color: inherit; /* Revert to original background color */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+    background-color: #ccc;
+    /* Remove any other hover effects like box-shadow, border changes, etc. */
+}
+
+.answer .letter {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.answer.clicked {
+    background-color: #FFC107;
+}
+
+/* Ketika tombol di-click, efek hover dinonaktifkan */
+.answer.clicked:hover {
+    background-color: #FFC107;
+}
+
+.answer:hover{
+    background-color: #ffc10760;
+}
+
+.answer-box {
+    border: 2px solid #E5E5E5;
+    min-height: 50px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.answer-box-container {
+    display: flex;
+    justify-content: center;  /* Center the answer boxes as a group */
+    flex-wrap: wrap;  /* Allow wrapping if the boxes don't fit in one line */
+    gap: 5px;  /* Space between answer boxes */
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.common-answer-style {
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* LISTENING PAGE */
 .listen-btn {
   align-items: center;
   background-color: #FFFFFF;
@@ -879,98 +974,6 @@ button[disabled] {
     color: #333;
 }
 
-/* Answer Options */
-.answer-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.answer {
-    font-family: 'Assistant', sans-serif;
-    display: flex;
-    align-items: center;
-    padding: 4px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white;
-    font-size: 17px;
-    cursor: pointer;
-    text-align: left;
-}
-
-
-
-.answer.disabled:hover {
-    background-color: inherit; /* Revert to original background color */
-    cursor: not-allowed; /* Change cursor to indicate it's disabled */
-    background-color: #ccc;
-    /* Remove any other hover effects like box-shadow, border changes, etc. */
-}
-
-.answer .letter {
-    width: 30px;
-    height: 30px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.answer.clicked {
-    background-color: #FFC107;
-}
-
-/* Ketika tombol di-click, efek hover dinonaktifkan */
-.answer.clicked:hover {
-    background-color: #FFC107;
-}
-
-.answer:hover{
-    background-color: #ffc10760;
-}
-
-.answer-box {
-    border: 2px solid #E5E5E5;
-    min-height: 50px;
-    width: 100px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 10px;
-    min-height: 50px;
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-}
-
-.answer-box-container {
-    display: flex;
-    justify-content: center;  /* Center the answer boxes as a group */
-    flex-wrap: wrap;  /* Allow wrapping if the boxes don't fit in one line */
-    gap: 5px;  /* Space between answer boxes */
-    margin-top: 20px;
-    width: 100%;
-}
-
-
-.common-answer-style {
-    font-family: 'Baloo 2', cursive;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1.5px solid #333;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-    cursor: pointer;
-    margin: 5px;
-}
-
 .answer-options.Listening {
     display: flex;
     flex-direction: row;
@@ -992,6 +995,7 @@ button[disabled] {
     cursor: grabbing;
 }
 
+/* NAVIGATION HEADER */
 /* Navigation Buttons */
 .navigation {
     display: flex;
@@ -1013,7 +1017,7 @@ button[disabled] {
     font-size: 12px;
 }
 
-/* --- auth ---*/
+/* AUTHENTICATION*/
 .login-box {
     background-color: #003566;
     padding: 30px;
@@ -1089,14 +1093,14 @@ button[disabled] {
 
     /* Flexbox untuk memastikan teks dan gambar berada di tengah */
     display: flex;
-    align-items: center; /* Menyelaraskan gambar dan teks secara vertikal */
-    justify-content: center; /* Menyelaraskan gambar dan teks secara horizontal */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .google-sign-in img {
     margin-right: 10px;
-    width: 20px; /* Ukuran gambar bisa diatur sesuai kebutuhan */
-    height: 20px; /* Ukuran gambar bisa diatur sesuai kebutuhan */
+    width: 20px; 
+    height: 20px; 
 }
 
 
@@ -1113,7 +1117,7 @@ button[disabled] {
     text-decoration: underline;
 }
 
-
+/* RESPONSIVENESS */
 @media screen and (max-width: 480px) {
     .header img, .header-home img{
         height: 30px;
