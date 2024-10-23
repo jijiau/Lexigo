@@ -27,17 +27,25 @@ document.querySelectorAll('.answer-box').forEach(box => {
             // Append the dragged answer
             this.appendChild(draggedAnswer);
 
+            // Adjust the size of the answer box based on the dragged element
+            this.style.width = draggedAnswer.offsetWidth + 'px';  // Set width to match the dragged answer's width
+            this.style.height = draggedAnswer.offsetHeight + 'px';  // Set height to match the dragged answer's height
+
             // Add event listener to allow returning answer back to original position
-            enableClickToReturn(draggedAnswer);
+            enableClickToReturn(draggedAnswer, this);
         }
     });
 });
 
 // Function to allow returning the answer to answer-options by clicking it
-function enableClickToReturn(answerElement) {
+function enableClickToReturn(answerElement, answerBox) {
     answerElement.addEventListener('click', function() {
         const originalAnswerOptions = document.querySelector('.answer-options.Listening');  // Where answers originate
         originalAnswerOptions.appendChild(answerElement);  // Move the answer back to original container
+
+        // Reset the size of the answer-box to default after the answer is removed
+        answerBox.style.width = '100px';  // Reset to default width
+        answerBox.style.height = '50px';  // Reset to default height
 
         // Remove any event listener for returning back
         answerElement.removeEventListener('click', arguments.callee);  
@@ -45,18 +53,22 @@ function enableClickToReturn(answerElement) {
 }
 
 // Undo the last move
-// function undoLastMove() {
-//     if (previousMoves.length === 0) {
-//         alert('No moves to undo!');
-//         return;
-//     }
+function undoLastMove() {
+    if (previousMoves.length === 0) {
+        alert('No moves to undo!');
+        return;
+    }
 
-//     const lastMove = previousMoves.pop();  // Get the last move
-//     lastMove.from.appendChild(lastMove.answer);  // Move the answer back to its original location
+    const lastMove = previousMoves.pop();  // Get the last move
+    lastMove.from.appendChild(lastMove.answer);  // Move the answer back to its original location
 
-//     // Re-enable the click event to return the answer to the original position if necessary
-//     enableClickToReturn(lastMove.answer);
-// }
+    // Reset the answer box's size
+    lastMove.to.style.width = '300px';  // Reset width to default
+    lastMove.to.style.height = '50px';  // Reset height to default
+
+    // Re-enable the click event to return the answer to the original position if necessary
+    enableClickToReturn(lastMove.answer, lastMove.to);
+}
 
 // Allow undo with the 'Undo' button
 document.querySelector('.btn.undo').addEventListener('click', undoLastMove);

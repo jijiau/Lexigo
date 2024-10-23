@@ -44,13 +44,9 @@ function checkAnswerOrder() {
     });
 
     // Jika panjang userAnswers tidak sesuai dengan correctOrder, berarti jawaban salah
-    if (userAnswers.length !== correctOrder.length) {
-        showFeedback(false);
-        return;
-    }
+    let isCorrect = userAnswers.length === correctOrder.length;
 
     // Bandingkan userAnswers dengan correctOrder
-    let isCorrect = true;
     for (let i = 0; i < correctOrder.length; i++) {
         if (userAnswers[i] !== correctOrder[i]) {
             isCorrect = false;
@@ -60,6 +56,13 @@ function checkAnswerOrder() {
 
     // Tampilkan feedback berdasarkan hasil pengecekan
     showFeedback(isCorrect);
+
+    // Tampilkan jawaban benar di bawah answer-box jika salah
+    if (!isCorrect) {
+        const correctAnswerContainer = document.getElementById('correct-answer-container');
+        correctAnswerContainer.innerText = `Correct Answer : "${correctOrder.join(' ')}"`;
+        correctAnswerContainer.style.display = 'block';  // Tampilkan jawaban yang benar
+    }
 }
 
 // Function to block clicking more answers after check

@@ -241,6 +241,7 @@ nav a img {
 
 
 .card-container h2{
+    font-family: 'Baloo 2', cursive;
     text-align: center;
     font-size: 50px;
     padding-top: 70px;
@@ -304,8 +305,9 @@ nav a img {
 
 /* Konten dalam card (teks) */
 .card-content h3 {
+    font-family: 'Baloo 2', cursive;
     font-size: 30px;
-    margin-bottom: 1px;
+    margin-bottom: -5px;
     font-weight: bold;
     font-size: 30px;
 }
@@ -902,15 +904,31 @@ button[disabled] {
 .answer-box {
     border: 2px solid #E5E5E5;
     min-height: 50px;
-    width: 300px;
+    width: 100px;
     text-align: center;
     border-radius: 5px;
     margin: 10px;
-
+    min-height: 50px;
     display: flex;
-    justify-content: center;  /* Horizontal Centering */
-    align-items: center;      /* Vertical Centering */
+    justify-content: center;  
+    align-items: center;
 }
+
+.answer-box-container {
+    display: flex;
+    justify-content: center;  /* Center the answer boxes as a group */
+    flex-wrap: wrap;  /* Allow wrapping if the boxes don't fit in one line */
+    gap: 5px;  /* Space between answer boxes */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.correct-answer-hint {
+    font-size: 12px;
+    color: #489D26; /* Warna hijau */
+    font-weight: bold;
+}
+
 
 .common-answer-style {
     font-family: 'Baloo 2', cursive;

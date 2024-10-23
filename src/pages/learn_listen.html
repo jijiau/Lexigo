@@ -35,7 +35,7 @@
             </div>
 
             <div class="question-header">
-                <h2>Urutkan kalimatnya!</h2>
+                <h2>Drag & Drop To Arrange The Words!</h2>
             </div>
 
             <!-- Listening Button -->
@@ -51,13 +51,18 @@
 
             <!-- Question Text -->
             <div class="question-text listening">
-                <div class="answer-box" id="answer-box-1"></div>
-                <div class="answer-box" id="answer-box-2"></div>
-                <div class="answer-box" id="answer-box-3"></div>
-                <div class="answer-box" id="answer-box-4"></div>
-                <div class="answer-box" id="answer-box-5"></div>
+                <div class="answer-box-container">
+                    <div class="answer-box" id="answer-box-1"></div>
+                    <div class="answer-box" id="answer-box-2"></div>
+                    <div class="answer-box" id="answer-box-3"></div>
+                    <div class="answer-box" id="answer-box-4"></div>
+                    <div class="answer-box" id="answer-box-5"></div>
+                </div>
             </div>
             
+            <!-- Container to show the correct answer -->
+            <div id="correct-answer-container" style="display: none; color: #58CC02; font-weight: bold; margin-bottom: 50px; margin-top: 5px;"></div>
+
             <div class="answer-options Listening">
                 <button class="answer common-answer-style" draggable="true" id="answer1">
                     my
