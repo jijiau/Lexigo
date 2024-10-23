@@ -153,11 +153,6 @@ nav a img {
     margin-right: 8px;
 }
 
-/* Styling untuk tombol */
-
-/* <!-- HTML !-->
-<button class="button-19" role="button">Button 19</button> */
-
 /* CSS */
 .btn {
     appearance: button;
@@ -543,6 +538,7 @@ button[disabled] {
     justify-content: center;
     text-align: center;
     background-color: #F6F6F6;
+    width: 100%;
 }
 
 /* Sidebar (Timer and Question Numbers) */
@@ -651,6 +647,7 @@ button[disabled] {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 22%;
     display: flex;
     padding: 20px;
     z-index: 999;
@@ -666,10 +663,13 @@ button[disabled] {
 }
 
 .feedback-wrapper {
-    display: flex; /* Mengatur konten dan    tombol agar sejajar horizontal */
-    justify-content: space-around; /* Memberi spasi antara konten feedback dan tombol continue */
+    display: flex;
+    padding-top: 25px;
+
+    flex-direction: row; /* Mengatur dalam 1 baris (2 kolom) */
+    justify-content: space-around; /* Ruang antara kolom feedback dan tombol */
     align-items: center; /* Rata tengah secara vertikal */
-    width: 100%; /* Bisa disesuaikan jika perlu */
+    width: 100%; /* Lebar penuh untuk wrapper */
 }
 
 .feedback-content {
@@ -686,6 +686,8 @@ button[disabled] {
 .feedback-message {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Rata kiri konten pesan */
+    justify-content: center; /* Rata tengah vertikal pada konten */
 }
 
 .feedback-text {
@@ -719,6 +721,8 @@ button[disabled] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
+    margin: 20px;
 }
 
 .progress-bar {
@@ -896,13 +900,31 @@ button[disabled] {
 }
 
 .answer-box {
-    border: 2px dashed #333;
-    padding: 20px;
+    border: 2px solid #E5E5E5;
     min-height: 50px;
     width: 300px;
     text-align: center;
     border-radius: 5px;
-    margin-top: 20px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;  /* Horizontal Centering */
+    align-items: center;      /* Vertical Centering */
+}
+
+.common-answer-style {
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .answer-options.Listening {
@@ -921,23 +943,6 @@ button[disabled] {
     padding: 10px;
     cursor: grab;
 }
-
-.btn.undo {
-    margin-top: 20px;
-    background-color: #FFCC00;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.delete-btn {
-    cursor: pointer;
-    color: red;
-    font-weight: bold;
-    margin-left: 5px;
-}
-
 
 .answer-options.Listening .answer:active {
     cursor: grabbing;

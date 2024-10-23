@@ -1,3 +1,5 @@
+let previousMoves = [];
+
 // Add event listeners to answers for dragging
 document.querySelectorAll('.answer').forEach(answer => {
     // When drag starts
@@ -19,36 +21,42 @@ document.querySelectorAll('.answer-box').forEach(box => {
 
         // Check if the answer box already has an answer
         if (this.children.length === 0) {
-            this.appendChild(draggedAnswer);  // Append the dragged answer
-            addDeleteButton(draggedAnswer);  // Add the delete button (X)
+            // Save the previous state for undo
+            previousMoves.push({ answer: draggedAnswer, from: draggedAnswer.parentElement, to: this });
+
+            // Append the dragged answer
+            this.appendChild(draggedAnswer);
+
+            // Add event listener to allow returning answer back to original position
+            enableClickToReturn(draggedAnswer);
         }
     });
 });
 
-// Function to add a delete button (X) to the dragged element
-function addDeleteButton(answerElement) {
-    // Create delete button
-    const deleteBtn = document.createElement('span');
-    deleteBtn.innerText = 'X';
-    deleteBtn.classList.add('delete-btn');
-    deleteBtn.style.marginLeft = '10px';  // Styling tombol X
-
-    // Event listener for delete button
-    deleteBtn.addEventListener('click', function() {
-        // Remove the answer element from the answer-box
+// Function to allow returning the answer to answer-options by clicking it
+function enableClickToReturn(answerElement) {
+    answerElement.addEventListener('click', function() {
         const originalAnswerOptions = document.querySelector('.answer-options.Listening');  // Where answers originate
-        originalAnswerOptions.appendChild(answerElement);  // Move back to original container
-        removeDeleteButton(answerElement);  // Remove the delete button once moved back
+        originalAnswerOptions.appendChild(answerElement);  // Move the answer back to original container
+
+        // Remove any event listener for returning back
+        answerElement.removeEventListener('click', arguments.callee);  
     });
-
-    answerElement.appendChild(deleteBtn);  // Append the delete button to the answer element
 }
 
-// Function to remove delete button (X)
-function removeDeleteButton(answerElement) {
-    const deleteBtn = answerElement.querySelector('.delete-btn');
-    if (deleteBtn) {
-        deleteBtn.remove();  // Remove the delete button from the answer element
-    }
-}
-s
+// Undo the last move
+// function undoLastMove() {
+//     if (previousMoves.length === 0) {
+//         alert('No moves to undo!');
+//         return;
+//     }
+
+//     const lastMove = previousMoves.pop();  // Get the last move
+//     lastMove.from.appendChild(lastMove.answer);  // Move the answer back to its original location
+
+//     // Re-enable the click event to return the answer to the original position if necessary
+//     enableClickToReturn(lastMove.answer);
+// }
+
+// Allow undo with the 'Undo' button
+document.querySelector('.btn.undo').addEventListener('click', undoLastMove);
