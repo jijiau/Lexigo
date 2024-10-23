@@ -310,6 +310,7 @@ nav a img {
 
 .card-wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px; /* Jarak antara gambar dan card */
     
@@ -1113,7 +1114,7 @@ button[disabled] {
     text-decoration: underline;
 }
 
-
+/* RESPONSIVENESS */
 @media screen and (max-width: 480px) {
     .header img, .header-home img{
         height: 30px;
@@ -1190,5 +1191,30 @@ button[disabled] {
     .google-sign-in {
         width: 60%;
         font-size: 0.8em;
+    }
+
+    .card-wrapper {
+        margin-left: 1px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .card-image {
+        width: 100px;
+        height: auto;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+    
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .card-container h2{
+        font-size: 35px;
     }
 }
