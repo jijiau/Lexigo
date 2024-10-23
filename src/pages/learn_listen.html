@@ -9,7 +9,7 @@
 <body>
     <div class="quiz-container">
         <!-- Sidebar with Timer and Question Numbers -->
-        <div class="sidebar">
+        <span class="sidebar">
             <div class="timer">
                 <p>Remaining Time</p>
                 <h1>00:20:35</h1>
@@ -26,7 +26,7 @@
                 <button class="button">9</button>
                 <button class="button current">10</button>
             </div>
-        </div>
+        </span>
 
         <!-- Main Content for Question and Answer -->
         <div class="main-content">
@@ -48,6 +48,9 @@
                     <span>Listen carefully...</span>
                 </button>
             </div>
+
+            <!-- Add Audio Element -->
+            <audio id="audioElement" src="../../assets/The-Audio.mp3"></audio>
 
             <!-- Question Text -->
             <div class="question-text listening">
@@ -106,6 +109,7 @@
 
     <script src="../scripts/drag_drop.js"></script>
     <script src="../scripts/check_listen.js"></script>
+    <script src="../scripts/play_audio.js"></script>
 </body>
 </html>
     

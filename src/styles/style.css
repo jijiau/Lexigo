@@ -14,6 +14,7 @@ body, a, p {
     color: #4B4B4B;
     font-size: medium;
     font-weight: 600;
+    background-image: url("../../assets/titik-titik.svg");
 }
 
 /* Heading styling */
@@ -21,58 +22,69 @@ h1, h2 {
     font-family: 'Baloo 2', cursive;
 }
 
+/* LENDING PAGE */
 /* Header styling */
 .header {
     background-color: #EAAD49;
     padding: 5px 15px;
     text-align: left;
+    align-items: center;
     font-size: 20px;
     width: 100%;
-    position: fixed; /* Menjadikan posisi tetap di bagian atas */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;  /* Memastikan header berada di depan elemen lain */
+    z-index: 1000;  
     display: flex;
-    justify-content: space-between; /* Atur jarak antara dua elemen */
-    align-items: center; /* Agar vertikal sejajar */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header img{
+    width: 50px;
+    height: auto;
 }
 
 /* Container utama untuk landing page */
 .landing-container {
-    padding-top: 50px; /* Memberikan jarak dari fixed header */
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    background-color: #003566;
     background-image: url('../../assets/Landingpage.svg');
     color: white;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
 }
 
 /* Flexbox untuk konten gambar di kiri, teks dan tombol di kanan */
 .landing-content {
     display: flex;
-    align-items: center; /* Memastikan gambar dan konten berada di tengah secara vertikal */
-    justify-content: flex-start; /* Gambar di sebelah kiri, teks dan tombol di sebelah kanan */
+    align-items: center; 
+    justify-content: flex-start; 
     width: 90%;
-    max-width: 1200px; /* Maksimal lebar untuk menjaga responsivitas */
-    margin: 0 auto;
+    max-width: 1200px; 
 }
+
 
 /* Styling untuk gambar di kiri */
 .left-image {
-    width: 500px; /* Sesuaikan ukuran gambar */
-    max-width: 100%; /* Agar responsif */
+    width: 500px; 
+    max-width: 100%; 
     height: auto;
-    margin-right: 20px; /* Jarak antara gambar dan konten */
+    margin-right: 20px; 
 }
 
 /* Container untuk teks dan tombol secara vertikal */
 .text-button-container {
     display: flex;
-    flex-direction: column; /* Mengatur teks dan tombol secara vertikal */
-    align-items: flex-start; /* Rata kiri */
-    gap: 10px; /* Jarak antara teks dan tombol */
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 10px;
+    width: 55%;
 }
 
 /* Styling untuk teks */
@@ -82,8 +94,7 @@ h1, h2 {
     color: white;
 }
 
-/* Navbar untuk link */
-
+/* HOME PAGE */
 .header-home {
     padding-top: 20px;
     padding-left: 50px;
@@ -95,6 +106,7 @@ h1, h2 {
     left: 0;
     z-index: 1000;  /* Memastikan header berada di depan elemen lain */
     display: flex;
+    flex-direction: row;
     justify-content: space-between; /* Atur jarak antara dua elemen */
     align-items: center; /* Agar vertikal sejajar */
     border-bottom: 3px solid #bebebe; /* Menambahkan garis bawah pada header */
@@ -102,21 +114,31 @@ h1, h2 {
     background-color: white;
 }
 
+.logo-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-home img {
+    height: 50px;
+    width: auto;
+}
+
 .header-home h1{
     font-size: 20px;
     color: #39B54A;
 }
 
-/* <!-- HTML !-->
-<button class="button-33" role="button">Button 33</button> */
-
-/* CSS */
 
 nav {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     gap: 10px;
     padding-right: 50px;
-    align-items: center; /* Rata tengah vertikal */
+    align-items: center; 
 }
 
 nav a {
@@ -128,8 +150,8 @@ nav a {
     display: inline-block;
     font-family: 'Baloo 2', cursive;
     padding: 7px 20px;
-    display: flex; /* Menggunakan flexbox di dalam link */
-    align-items: center; /* Rata tengah vertikal untuk konten di dalam link */
+    display: flex; 
+    align-items: center; 
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
@@ -153,7 +175,6 @@ nav a img {
     margin-right: 8px;
 }
 
-/* CSS */
 .btn {
     appearance: button;
     font-family: 'Assistant', sans-serif;
@@ -246,7 +267,7 @@ nav a img {
     font-size: 50px;
     padding-top: 70px;
     color: #4B4B4B;
-    margin-top: -100px; /* Naikkan posisi h2 dengan margin negatif */
+    margin-top: -100px; 
 }
 
 /* Styling umum untuk card */
@@ -263,8 +284,8 @@ nav a img {
 }
 
 .card:hover{
-    transform: scale(1.05); /* Card akan sedikit membesar, 5% lebih besar */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Tambahkan shadow agar card terlihat lebih menonjol */ 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
 }
 
 /* Styling untuk checkbox dalam card */
@@ -277,7 +298,7 @@ nav a img {
 .card-checkbox input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    margin-right: 10px; /* Menambahkan jarak antara checkbox dan konten card */
+    margin-right: 10px; 
     cursor: pointer;
 }
 
@@ -289,7 +310,7 @@ nav a img {
 .card-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px; /* Jarak antara gambar dan card */
+    gap: 15px; 
     
 }
 
@@ -351,7 +372,10 @@ nav a img {
 }
 
 .profile-container {
-    max-width: 600px;
+    max-width: 500px;
+    /* display: flex;
+    flex-direction: column; */
+    flex-wrap: wrap;
     margin: 70px auto 0;
     margin-bottom: 10px;
     padding: 20px;
@@ -466,6 +490,17 @@ small {
     margin-top: 20px;
 }
 
+.form-actions .btn {
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.form-actions .btn.skip {
+    font-size: 10px;
+    padding: 10px;
+}
+
 .logout {
     background-color: transparent;
     color: #333;
@@ -535,7 +570,7 @@ button[disabled] {
 .quiz-container {
     color: F7F7F7;
     position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
-    align-items: center;
+    align-items: start;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -553,7 +588,7 @@ button[disabled] {
     flex-direction: column;
     align-items:center;
     border-radius: 8px;
-    margin-top: -200px;
+    margin-top: 20px;
 }
 
 .sidebar.listen {
@@ -583,11 +618,7 @@ button[disabled] {
     gap: 10px;
     justify-content: center;
 }
-/* 
-<!-- HTML !-->
-<button class="button-1" role="button">Button 1</button> */
 
-/* CSS */
 .question-numbers .button {
   background-color: #89E219;
   border-radius: 8px;
@@ -816,8 +847,9 @@ button[disabled] {
 
 
 .question-header{
-    font-size: 20px;
-    text-align: left;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .question-text {
@@ -923,12 +955,6 @@ button[disabled] {
     width: 100%;
 }
 
-.correct-answer-hint {
-    font-size: 12px;
-    color: #489D26; /* Warna hijau */
-    font-weight: bold;
-}
-
 
 .common-answer-style {
     font-family: 'Baloo 2', cursive;
@@ -975,6 +1001,7 @@ button[disabled] {
 
 .btn.skip:after {
     background-color: white;
+    border-color: #333;
 }
 
 .btn.skip{
@@ -986,16 +1013,19 @@ button[disabled] {
     font-size: 12px;
 }
 
-
 /* --- auth ---*/
 .login-box {
     background-color: #003566;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 40%;
     text-align: center;
     color: #FFF8C6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 35px;
 }
 
 .login-box h2 {
@@ -1030,6 +1060,16 @@ button[disabled] {
     cursor: default; /* Menghindari pointer cursor */
     text-decoration: none;
     padding-bottom: 5px;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.tombol-sign-in {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .google-sign-in {
@@ -1045,6 +1085,7 @@ button[disabled] {
     margin-top: 10px;
     cursor: pointer; 
     font-weight: bold;
+    text-align: left;
 
     /* Flexbox untuk memastikan teks dan gambar berada di tengah */
     display: flex;
@@ -1071,27 +1112,83 @@ button[disabled] {
 .register-link:hover {
     text-decoration: underline;
 }
-/* Responsif */
-@media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 480px) {
+    .header img, .header-home img{
+        height: 30px;
+        width: auto;
+        margin-left: 0px;
+    }
+
     .landing-content {
-        flex-direction: column; /* Agar gambar dan konten bertumpuk pada layar kecil */
-        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .left-image {
-        margin-right: 0;
-        margin-bottom: 20px; /* Jarak antara gambar dan teks di layar kecil */
+    .logo-home {
+        margin-left: -30px;
     }
 
-    .text-button-container {
-        align-items: center; /* Rata tengah pada layar kecil */
+    .profile-container{
+        margin-top: 70px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .profile-container h2{
+        font-size: 30px;
+    }
+
+    .profile-content p {
+        font-size: 10px;
+    }
+    
+    .profile-content span {
+        font-size: 15px;
+    }
+
+    .header h1, .header-home h1{
+        font-size: 17px;
+    }
+
+    .text-button-container h2 {
+        font-size: 1.3rem;
+        text-align: left; /* Tetap rata kiri */
+    }
+
+    .text-button-container .btn, .profile-actions .btn{
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    nav a {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    nav a img{
+        height: 1px;
+        width: auto;
+        margin-left: 0px;
+    }
+
+    .login-box {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    #sign-in-btn{
+        width: 60%;
+    }
+
+    .google-sign-in {
+        width: 60%;
+        font-size: 0.8em;
     }
 }

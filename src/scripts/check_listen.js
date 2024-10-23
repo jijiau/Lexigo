@@ -8,6 +8,8 @@ function showFeedback(isCorrect) {
     const feedbackIcon = document.querySelector('.feedback-icon'); // Feedback icon area
     const feedbackReport = document.querySelector('.report'); // Feedback Report
 
+    const falseNumberAnswer = document.querySelector('.question-numbers .button.current');
+
     // Change the text and background color based on correctness
     if (isCorrect) {
         feedbackText.innerText = 'Nice!'; // Set feedback text to "Nice!"
@@ -15,12 +17,16 @@ function showFeedback(isCorrect) {
         feedbackContainer.style.backgroundColor = '#CCFFCC'; // Light green background for correct answer
         feedbackIcon.innerHTML = '<img src="../../assets/correct-icon.svg" alt="Correct Icon" class="feedback-icon-img">'; // Set correct icon
         feedbackReport.style.color = '#489D26'; // Set "Report" color to match correct styling
+
+        falseNumberAnswer.style.backgroundColor = "#89E219";
     } else {
         feedbackText.innerText = 'Nice Try!'; // Set feedback text to "Nice Try!"
         feedbackText.style.color = '#EC0B1B'; // Set the text color to red
         feedbackContainer.style.backgroundColor = '#FFCCCC'; // Light red background for incorrect answer
         feedbackIcon.innerHTML = '<img src="../../assets/incorrect-icon.svg" alt="Incorrect Icon" class="feedback-icon-img">'; // Set incorrect icon
         feedbackReport.style.color = '#EC0B1B'; // Set "Report" color to match incorrect styling
+
+        falseNumberAnswer.style.backgroundColor = "#FF7676";
     }
 
     feedbackContainer.style.display = 'block';  // Show feedback container

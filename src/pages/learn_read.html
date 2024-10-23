@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="quiz-container">
-        <!-- Sidebar for Timer and Questions Numbers -->
-        <div class="sidebar">
+        <!-- Sidebar untuk Timer dan Questions Numbers -->
+        <span class="sidebar">
             <div class="timer">
                 <p>Remaining Time</p>
                 <h1>00:20:35</h1>
@@ -26,10 +26,10 @@
                 <button class="button">9</button>
                 <button class="button current">10</button>
             </div>
-        </div>
+        </span>
 
-        <!-- Main Content for Question and Answers -->
-        <div class="main-content">
+        <!-- Main Content untuk Question and Answers -->
+        <span class="main-content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
@@ -41,7 +41,7 @@
                 <h2>The text as a whole tells us about ...</h2>
             </div>
 
-            <!-- Answer Options -->
+            <!-- Opsi Jawaban -->
             <div class="answer-options">
                 <button class="answer">
                     <span class="letter" data-correct="true">A</span>
@@ -65,23 +65,23 @@
                 </button>
             </div>
 
-            <!-- Navigation Buttons -->
+            <!-- Tombol Navigasi -->
             <div class="navigation">
                 <button class="btn skip">Skip</button>
                 <button class="btn check">Check</button>
             </div>
-        </div>
+        </span>
 
         <!-- Footer for Feedback (initially hidden) -->
         <div class="feedback-container" id="feedback" style="display: none;">
             <div class="feedback-wrapper">
                 <div class="feedback-content">
                     <div class="feedback-icon">
-                        <!-- Icon (image) will be dynamically inserted here -->
+                        <!-- Ikon akan secara dinamis masuk ke bagian ini -->
                     </div>
                     <div class="feedback-message">
-                        <p class="feedback-text"></p> <!-- Teks feedback ("Nice!" atau "Nice Try!") -->
-                        <p class="report">Report</p> <!-- Report link -->
+                        <p class="feedback-text"></p> 
+                        <p class="report">Report</p>
                     </div>
                 </div>
                 <a href="home.html" class="btn continue" onclick="continueQuiz()">Finish</a> <!-- Continue button -->
