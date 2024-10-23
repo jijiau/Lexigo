@@ -22,7 +22,6 @@ h1, h2 {
     font-family: 'Baloo 2', cursive;
 }
 
-/* LENDING PAGE */
 /* Header styling */
 .header {
     background-color: #EAAD49;
@@ -47,7 +46,7 @@ h1, h2 {
 
 /* Container utama untuk landing page */
 .landing-container {
-    padding-top: 50px;
+    padding-top: 50px;  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,23 +93,24 @@ h1, h2 {
     color: white;
 }
 
-/* HOME PAGE */
+/* Navbar untuk link */
+
 .header-home {
     padding-top: 20px;
     padding-left: 50px;
     text-align: left;
     font-size: 20px;
     width: 100%;
-    position: fixed; /* Menjadikan posisi tetap di bagian atas */
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000;  /* Memastikan header berada di depan elemen lain */
+    z-index: 1000;  
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Atur jarak antara dua elemen */
-    align-items: center; /* Agar vertikal sejajar */
-    border-bottom: 3px solid #bebebe; /* Menambahkan garis bawah pada header */
-    padding-bottom: 20px; /* Menambahkan jarak antara navbar dan elemen di bawahnya */
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 3px solid #bebebe; 
+    padding-bottom: 20px; 
     background-color: white;
 }
 
@@ -138,7 +138,7 @@ nav {
     justify-content: space-evenly;
     gap: 10px;
     padding-right: 50px;
-    align-items: center; 
+    align-items: center; /* Rata tengah vertikal */
 }
 
 nav a {
@@ -175,6 +175,7 @@ nav a img {
     margin-right: 8px;
 }
 
+/* CSS */
 .btn {
     appearance: button;
     font-family: 'Assistant', sans-serif;
@@ -267,7 +268,7 @@ nav a img {
     font-size: 50px;
     padding-top: 70px;
     color: #4B4B4B;
-    margin-top: -100px; 
+    margin-top: -100px; /* Naikkan posisi h2 dengan margin negatif */
 }
 
 /* Styling umum untuk card */
@@ -298,7 +299,7 @@ nav a img {
 .card-checkbox input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    margin-right: 10px; 
+    margin-right: 10px; /* Menambahkan jarak antara checkbox dan konten card */
     cursor: pointer;
 }
 
@@ -310,7 +311,7 @@ nav a img {
 .card-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px; 
+    gap: 15px; /* Jarak antara gambar dan card */
     
 }
 
@@ -361,20 +362,20 @@ nav a img {
 .card-action img {
     width: 80px;
     height: 80px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan animasi pada hover */
     
 }
 
 /* Hover effect untuk gambar saja */
 .card-action img:hover {
-    transform: scale(1.2); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.2); /* Zoom gambar saat di-hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow pada gambar saat di-hover */
 }
 
-
-/* VIEW PROFILE PAGE */
 .profile-container {
     max-width: 500px;
+    /* display: flex;
+    flex-direction: column; */
     flex-wrap: wrap;
     margin: 70px auto 0;
     margin-bottom: 10px;
@@ -401,7 +402,7 @@ nav a img {
 }
 
 .profile-image-container {
-    position:relative; 
+    position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
     align-items: center;
     display: flex;
     justify-content: center;
@@ -409,11 +410,11 @@ nav a img {
 }
 
 #profileImage {
-    border-radius: 50%; 
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
     object-fit: cover;
     width: 100px;
     height: 100px;
-    border: 2px solid #4B4B4B; 
+    border: 2px solid #4B4B4B; /* Memberikan frame di sekitar gambar */
     align-items: center;
 }
 
@@ -421,19 +422,17 @@ nav a img {
     width: 50px;
     height: 50px;
 }
-
-/* EDIT PROFILE PAGE */
 /* Styling untuk input file */
 .profile-group {
     color: black;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    text-align: center;     
+    flex-direction: column; /* Menyusun elemen dalam kolom vertikal */
+    align-items: center;    /* Memusatkan konten di dalam div */
+    text-align: center;     /* Memastikan teks juga berada di tengah */
 }
 
 input[type="file"] {
-    margin-top: 1px; 
+    margin-top: 1px; /* Beri jarak antar elemen */
 }
 
 small {
@@ -536,9 +535,9 @@ button[disabled] {
 }
 
 .profile-content {
-    display: flex; /* Menggunakan Flexbox untuk mengatur elemen secara horizontal */
-    flex-direction: column; /* Mengatur elemen menjadi satu kolom vertikal */
-    align-items: flex-start; /* Memastikan elemen rata kiri */
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
     margin-bottom: 20px;
 }
 
@@ -568,7 +567,6 @@ button[disabled] {
     transition: background-color 0.3s ease;
 }
 
-/* READING PAGE */
 /* Quiz*/
 .quiz-container {
     color: F7F7F7;
@@ -676,7 +674,6 @@ button[disabled] {
   background-color: #FFD700ab;
 }
 
-/* FEEDBACK FOOTER */
 /* Feedback Container (hidden by default) */
 /* Feedback Container Styles */
 .feedback-container {
@@ -696,17 +693,17 @@ button[disabled] {
 }
 
 .feedback-container.active {
-    transform: translateY(0); 
+    transform: translateY(0); /* Muncul dari bawah ke atas */
 }
 
 .feedback-wrapper {
     display: flex;
     padding-top: 25px;
 
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-around; 
     align-items: center; 
-    width: 100%;
+    width: 100%; 
 }
 
 .feedback-content {
@@ -723,8 +720,8 @@ button[disabled] {
 .feedback-message {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Rata kiri konten pesan */
-    justify-content: center; /* Rata tengah vertikal pada konten */
+    align-items: flex-start; 
+    justify-content: center; 
 }
 
 .feedback-text {
@@ -762,7 +759,6 @@ button[disabled] {
     margin: 20px;
 }
 
-
 .progress-bar {
     height: 8px;
     width: 100%;
@@ -778,97 +774,7 @@ button[disabled] {
     border-radius: 4px;
 }
 
-/* Answer Options */
-.answer-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.answer {
-    font-family: 'Assistant', sans-serif;
-    display: flex;
-    align-items: center;
-    padding: 4px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white;
-    font-size: 17px;
-    cursor: pointer;
-    text-align: left;
-}
-
-.answer.disabled:hover {
-    background-color: inherit; /* Revert to original background color */
-    cursor: not-allowed; /* Change cursor to indicate it's disabled */
-    background-color: #ccc;
-    /* Remove any other hover effects like box-shadow, border changes, etc. */
-}
-
-.answer .letter {
-    width: 30px;
-    height: 30px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.answer.clicked {
-    background-color: #FFC107;
-}
-
-/* Ketika tombol di-click, efek hover dinonaktifkan */
-.answer.clicked:hover {
-    background-color: #FFC107;
-}
-
-.answer:hover{
-    background-color: #ffc10760;
-}
-
-.answer-box {
-    border: 2px solid #E5E5E5;
-    min-height: 50px;
-    width: 100px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 10px;
-    min-height: 50px;
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-}
-
-.answer-box-container {
-    display: flex;
-    justify-content: center;  /* Center the answer boxes as a group */
-    flex-wrap: wrap;  /* Allow wrapping if the boxes don't fit in one line */
-    gap: 5px;  /* Space between answer boxes */
-    margin-top: 20px;
-    width: 100%;
-}
-
-
-.common-answer-style {
-    font-family: 'Baloo 2', cursive;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1.5px solid #333;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-    cursor: pointer;
-    margin: 5px;
-}
-
-/* LISTENING PAGE */
+/* CSS */
 .listen-btn {
   align-items: center;
   background-color: #FFFFFF;
@@ -974,6 +880,97 @@ button[disabled] {
     color: #333;
 }
 
+/* Answer Options */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer {
+    font-family: 'Assistant', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: left;
+}
+
+
+
+.answer.disabled:hover {
+    background-color: inherit; 
+    cursor: not-allowed; 
+    background-color: #ccc;
+}
+
+.answer .letter {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.answer.clicked {
+    background-color: #FFC107;
+}
+
+/* Ketika tombol di-click, efek hover dinonaktifkan */
+.answer.clicked:hover {
+    background-color: #FFC107;
+}
+
+.answer:hover{
+    background-color: #ffc10760;
+}
+
+.answer-box {
+    border: 2px solid #E5E5E5;
+    min-height: 50px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.answer-box-container {
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;  
+    gap: 5px;  
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.common-answer-style {
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 5px;
+}
+
 .answer-options.Listening {
     display: flex;
     flex-direction: row;
@@ -995,7 +992,6 @@ button[disabled] {
     cursor: grabbing;
 }
 
-/* NAVIGATION HEADER */
 /* Navigation Buttons */
 .navigation {
     display: flex;
@@ -1017,7 +1013,7 @@ button[disabled] {
     font-size: 12px;
 }
 
-/* AUTHENTICATION*/
+/* --- auth ---*/
 .login-box {
     background-color: #003566;
     padding: 30px;
@@ -1091,7 +1087,7 @@ button[disabled] {
     font-weight: bold;
     text-align: left;
 
-    /* Flexbox untuk memastikan teks dan gambar berada di tengah */
+    
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -1117,7 +1113,7 @@ button[disabled] {
     text-decoration: underline;
 }
 
-/* RESPONSIVENESS */
+
 @media screen and (max-width: 480px) {
     .header img, .header-home img{
         height: 30px;
