@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="quiz-container">
-        <!-- Sidebar with Timer and Question Numbers -->
+        <!-- Sidebar dengan Timer dan Question Numbers -->
         <span class="sidebar">
             <div class="timer">
                 <p>Remaining Time</p>
@@ -94,19 +94,18 @@
         <div class="feedback-container" id="feedback" style="display: none;">
             <div class="feedback-wrapper">
                 <div class="feedback-content">
-                    <div class="feedback-icon">
-                        <!-- Icon (image) will be dynamically inserted here -->
-                    </div>
+                    <div class="feedback-icon"></div>
                     <div class="feedback-message">
-                        <p class="feedback-text"></p> <!-- Teks feedback ("Nice!" atau "Nice Try!") -->
-                        <p class="report">Report</p> <!-- Report link -->
+                        <p class="feedback-text"></p>
+                        <p class="report">Report</p>
                     </div>
                 </div>
-                <a href="home.html" class="btn continue" onclick="continueQuiz()">Finish</a> <!-- Continue button -->
+                <a href="home.html" class="btn continue" onclick="continueQuiz()">Finish</a>
             </div>
         </div>      
     </div>
-
+    
+    <!-- Panggil file JavaScript untuk menjalankan fungsi drag & drop serta pemutaran audio -->
     <script src="../scripts/drag_drop.js"></script>
     <script src="../scripts/check_listen.js"></script>
     <script src="../scripts/play_audio.js"></script>

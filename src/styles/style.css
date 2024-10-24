@@ -1,14 +1,11 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Baloo+2:wght@400;700&display=swap');
 
-/* Reset margin, padding, dan box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Pengaturan umum untuk body */
 body, a, p {
     font-family: 'Assistant', sans-serif;
     color: #4B4B4B;
@@ -17,12 +14,10 @@ body, a, p {
     background-image: url("../../assets/titik-titik.svg");
 }
 
-/* Heading styling */
 h1, h2 {
     font-family: 'Baloo 2', cursive;
 }
 
-/* Header styling */
 .header {
     background-color: #EAAD49;
     padding: 5px 15px;
@@ -44,7 +39,7 @@ h1, h2 {
     height: auto;
 }
 
-/* Container utama untuk landing page */
+/* LANDING PAGE */
 .landing-container {
     padding-top: 50px;  
     display: flex;
@@ -59,7 +54,6 @@ h1, h2 {
     min-height: 100vh;
 }
 
-/* Flexbox untuk konten gambar di kiri, teks dan tombol di kanan */
 .landing-content {
     display: flex;
     align-items: center; 
@@ -68,8 +62,6 @@ h1, h2 {
     max-width: 1200px; 
 }
 
-
-/* Styling untuk gambar di kiri */
 .left-image {
     width: 500px; 
     max-width: 100%; 
@@ -77,7 +69,6 @@ h1, h2 {
     margin-right: 20px; 
 }
 
-/* Container untuk teks dan tombol secara vertikal */
 .text-button-container {
     display: flex;
     flex-direction: column; 
@@ -86,15 +77,13 @@ h1, h2 {
     width: 55%;
 }
 
-/* Styling untuk teks */
 .text-button-container h2 {
     margin-bottom: 10px;
     font-size: 40px;
     color: white;
 }
 
-/* Navbar untuk link */
-
+/* HOMEPAGE */
 .header-home {
     padding-top: 20px;
     padding-left: 50px;
@@ -131,14 +120,14 @@ h1, h2 {
     color: #39B54A;
 }
 
-
+/* NAVIGATION BAR */
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 10px;
     padding-right: 50px;
-    align-items: center; /* Rata tengah vertikal */
+    align-items: center;
 }
 
 nav a {
@@ -162,20 +151,19 @@ nav a {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
-  
+
 nav a:hover {
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
 }
 
-/* Styling untuk ikon di dalam link navbar */
 nav a img {
     width: 25px;
     height: 25px;
     margin-right: 8px;
 }
 
-/* CSS */
+/* BUTTON DEFAULT --> Source: https://getcssscan.com/css-buttons-examples */
 .btn {
     appearance: button;
     font-family: 'Assistant', sans-serif;
@@ -247,7 +235,7 @@ nav a img {
     width: 100%;
 }
 
-/* Styling untuk card-container */
+/* CARD READING & LISTENING LAB */
 .card-container {
     display: flex;
     gap: 20px;
@@ -261,17 +249,15 @@ nav a img {
     padding-left: -50px;
 }
 
-
 .card-container h2{
     font-family: 'Baloo 2', cursive;
     text-align: center;
     font-size: 50px;
     padding-top: 70px;
     color: #4B4B4B;
-    margin-top: -100px; /* Naikkan posisi h2 dengan margin negatif */
+    margin-top: -100px;
 }
 
-/* Styling umum untuk card */
 .card {
     width: 600px;
     padding: 20px;
@@ -289,21 +275,18 @@ nav a img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
 }
 
-/* Styling untuk checkbox dalam card */
 .card-checkbox {
     display: flex;
     align-items: center;
 }
 
-/* Style untuk checkbox */
 .card-checkbox input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    margin-right: 10px; /* Menambahkan jarak antara checkbox dan konten card */
+    margin-right: 10px;
     cursor: pointer;
 }
 
-/* Card warna hijau untuk Read */
 .card-green {
     background-color: #39B54A;
 }
@@ -312,8 +295,7 @@ nav a img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px; /* Jarak antara gambar dan card */
-    
+    gap: 15px;
 }
 
 .card-image {
@@ -321,12 +303,10 @@ nav a img {
     height: 170px;
 }
 
-/* Card warna kuning untuk Speaking */
 .card-yellow {
     background-color: #FFC107;
 }
 
-/* Konten dalam card (teks) */
 .card-content h3 {
     font-family: 'Baloo 2', cursive;
     font-size: 30px;
@@ -341,13 +321,13 @@ nav a img {
     color: white;
 }
 
-/* Styling untuk tombol "START" dan ikon bintang */
 .card-action {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* CARD'S START BUTTON */
 .btn-start {
     background-color: white;
     color: #39B54A;
@@ -359,24 +339,20 @@ nav a img {
     margin-bottom: 10px;
 }
 
-/* Styling untuk gambar bintang */
 .card-action img {
     width: 80px;
     height: 80px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan animasi pada hover */
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect untuk gambar saja */
 .card-action img:hover {
-    transform: scale(1.2); /* Zoom gambar saat di-hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow pada gambar saat di-hover */
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* PROFILE PAGE */
 .profile-container {
     max-width: 500px;
-    /* display: flex;
-    flex-direction: column; */
     flex-wrap: wrap;
     margin: 100px auto 0;
     margin-bottom: 10px;
@@ -403,7 +379,7 @@ nav a img {
 }
 
 .profile-image-container {
-    position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
+    position:relative;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -411,11 +387,11 @@ nav a img {
 }
 
 #profileImage {
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border-radius: 50%;
     object-fit: cover;
     width: 100px;
     height: 100px;
-    border: 2px solid #4B4B4B; /* Memberikan frame di sekitar gambar */
+    border: 2px solid #4B4B4B;
     align-items: center;
 }
 
@@ -423,23 +399,24 @@ nav a img {
     width: 50px;
     height: 50px;
 }
-/* Styling untuk input file */
+
 .profile-group {
     color: black;
     display: flex;
-    flex-direction: column; /* Menyusun elemen dalam kolom vertikal */
-    align-items: center;    /* Memusatkan konten di dalam div */
-    text-align: center;     /* Memastikan teks juga berada di tengah */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 input[type="file"] {
-    margin-top: 1px; /* Beri jarak antar elemen */
+    margin-top: 1px;
 }
 
 small {
     margin-top: 5px;
 }
 
+/* input form for EDIT PROFILE PAGE */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -452,8 +429,8 @@ small {
 }
 
 .form-group input[type="file"]{
-    align-items: left; /* Pusatkan elemen secara horizontal */
-    text-align: left; /* Pastikan teks berada di tengah */
+    align-items: left;
+    text-align: left;
     color: black;
     padding: 5px;
     font-size: 14px;
@@ -479,7 +456,6 @@ small {
     margin-bottom: 5px;
 }
 
-/* Actions (Logout and Delete) */
 .form-actions {
     display: flex;
     justify-content: space-between;
@@ -521,13 +497,13 @@ small {
     text-decoration: underline;
 }
 
-/* Button Disabled Styling */
 button[disabled] {
     background-color: #ccc;
     color: white;
     cursor: not-allowed;
 }
 
+/* Informasi probadi pada VIEW PROFILE PAGE */
 .profile-info{
     justify-content: center;
     margin-top: 30px;
@@ -553,7 +529,6 @@ button[disabled] {
     color: black;
 }
 
-/* Profile actions for editing */
 .profile-actions {
     display: flex;
     justify-content: center;
@@ -569,7 +544,7 @@ button[disabled] {
     transition: background-color 0.3s ease;
 }
 
-/* Quiz*/
+/* READING & LISTENING LAB */
 .quiz-container {
     color: F7F7F7;
     position:relative;
@@ -582,11 +557,10 @@ button[disabled] {
     padding: 20px;
 }
 
-/* Sidebar (Timer and Question Numbers) */
-
+/* BAGIAN SIDEBAR untuk navigasi nomor */
 .sidebar {
     width: 200px;
-    background-color: white; /* Background color for the sidebar */
+    background-color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -667,7 +641,6 @@ button[disabled] {
   background-color: #ff7676ab;
 }
 
-
 .question-numbers .button.active {
     background-color: #FFD700;
 }
@@ -677,8 +650,7 @@ button[disabled] {
   background-color: #FFD700ab;
 }
 
-/* Feedback Container (hidden by default) */
-/* Feedback Container Styles */
+/* FOOTER UNTUK FEEDBACK keterangan benar dan salah */
 .feedback-container {
     position: fixed;
     bottom: 0;
@@ -696,13 +668,12 @@ button[disabled] {
 }
 
 .feedback-container.active {
-    transform: translateY(0); /* Muncul dari bawah ke atas */
+    transform: translateY(0);
 }
 
 .feedback-wrapper {
     display: flex;
     padding-top: 25px;
-
     flex-direction: row;
     justify-content: space-around; 
     align-items: center; 
@@ -711,7 +682,7 @@ button[disabled] {
 
 .feedback-content {
     display: flex;
-    align-items: center; /* Agar ikon dan pesan rata tengah vertikal */
+    align-items: center;
 }
 
 .feedback-icon img {
@@ -730,19 +701,20 @@ button[disabled] {
 .feedback-text {
     font-size: 20px;
     font-weight: bold;
-    color: #489D26; /* Hijau gelap untuk teks Nice! */
+    color: #489D26;
     margin: 0;
 }
 
 .report {
     font-size: 15px;
     font-weight: lighter;
-    color: #489D26; /* Warna hijau gelap untuk report */
+    color: #489D26;
     text-decoration: underline;
     cursor: pointer;
     text-align: left;
 }
 
+/* NAVIGASI antar nomor soal */
 .btn.continue {
     font-size: 13px;
 }
@@ -751,7 +723,7 @@ button[disabled] {
     font-size: 13px;
 }
 
-/* Main Content (Question and Answer Section) */
+/* LAB yang terdiri atas SIDEBAR dan QUESTIONS */
 .main-content {
     width: 80%;
     padding: 40px;
@@ -773,12 +745,12 @@ button[disabled] {
 
 .progress {
     height: 100%;
-    width: 90%; /* Progress of the quiz */
+    width: 90%;
     background-color: #00BFFF;
     border-radius: 4px;
 }
 
-/* CSS */
+/* TOMBOL LISTENING untuk LISTENING LAB */
 .listen-btn {
   align-items: center;
   background-color: #FFFFFF;
@@ -808,11 +780,10 @@ button[disabled] {
 }
 
 .soal {
-    display: flex; /* Menggunakan Flexbox untuk pengaturan elemen secara horizontal */
-    justify-content:center; /* Elemen-elemen akan diratakan di tengah secara horizontal */
+    display: flex;
+    justify-content:center;
     width: 100%;
-    align-items: center; /* Elemen-elemen akan diratakan di tengah secara vertikal */
-    
+    align-items: center;
 }
 
 .hiasan img {
@@ -839,17 +810,17 @@ button[disabled] {
 }
 
 .listen-btn img {
-    margin-right: 5px; /* Memberikan jarak antara gambar dan teks */
+    margin-right: 5px;
     height: 15px;
 }
 
 .listen-btn span {
     font-family: 'Assistant', sans-serif;
-    margin-left: 5px; /* Jika teks dibungkus dalam elemen span */
+    margin-left: 5px;
     font-weight: bold;
 }
 
-
+/* BAGIAN PERTANYAAN */
 .question-header{
     font-size: 18px;
     text-align: center;
@@ -883,7 +854,7 @@ button[disabled] {
     color: #333;
 }
 
-/* Answer Options */
+/* BAGIAN JAWABAN */
 .answer-options {
     display: flex;
     flex-direction: column;
@@ -903,8 +874,6 @@ button[disabled] {
     text-align: left;
 }
 
-
-
 .answer.disabled:hover {
     background-color: inherit; 
     cursor: not-allowed; 
@@ -923,11 +892,11 @@ button[disabled] {
     font-weight: bold;
 }
 
+/* TOMBOL JAWABAN */
 .answer.clicked {
     background-color: #FFC107;
 }
 
-/* Ketika tombol di-click, efek hover dinonaktifkan */
 .answer.clicked:hover {
     background-color: #FFC107;
 }
@@ -958,7 +927,7 @@ button[disabled] {
     width: 100%;
 }
 
-
+/* DRAG & DROP STYLE */
 .common-answer-style {
     font-family: 'Baloo 2', cursive;
     font-size: 14px;
@@ -995,7 +964,6 @@ button[disabled] {
     cursor: grabbing;
 }
 
-/* Navigation Buttons */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -1016,7 +984,7 @@ button[disabled] {
     font-size: 12px;
 }
 
-/* --- auth ---*/
+/* LOGIN PAGE */
 .login-box {
     background-color: #003566;
     padding: 30px;
@@ -1055,12 +1023,11 @@ button[disabled] {
     font-size: 1em;
 }
 
-/* Forgot Password and Buttons */
 .forgot-password {
     font-family: 'Assistant', sans-serif;
     color: white;
     font-size: 14px;
-    cursor: default; /* Menghindari pointer cursor */
+    cursor: default;
     text-decoration: none;
     padding-bottom: 5px;
     margin: 20px;
@@ -1089,8 +1056,6 @@ button[disabled] {
     cursor: pointer; 
     font-weight: bold;
     text-align: left;
-
-    
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -1102,11 +1067,9 @@ button[disabled] {
     height: 20px; 
 }
 
-
-/* Styling for "Register Now" link */
 .register-link {
     font-family: 'Assistant', sans-serif;
-    color: #39B54A; /* Warna hijau untuk Register link */
+    color: #39B54A;
     font-weight: bold;
     font: 0.5em;
     text-decoration: none;
@@ -1178,7 +1141,7 @@ button[disabled] {
 
     .text-button-container h2 {
         font-size: 1.3rem;
-        text-align: left; /* Tetap rata kiri */
+        text-align: left;
     }
 
     .text-button-container .btn, .profile-actions .btn{
@@ -1256,7 +1219,6 @@ button[disabled] {
 
     .main-content {
         width: 100%;
-        /* padding: 40px, 20px; */
     }
 
     .question-numbers .button {
