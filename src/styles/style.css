@@ -378,7 +378,7 @@ nav a img {
     /* display: flex;
     flex-direction: column; */
     flex-wrap: wrap;
-    margin: 70px auto 0;
+    margin: 100px auto 0;
     margin-bottom: 10px;
     padding: 20px;
     background-color: white;
@@ -455,6 +455,8 @@ small {
     align-items: left; /* Pusatkan elemen secara horizontal */
     text-align: left; /* Pastikan teks berada di tengah */
     color: black;
+    padding: 5px;
+    font-size: 14px;
 }
 
 .form-group input[type="text"],
@@ -463,11 +465,6 @@ small {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
-}
-
-.form-group input[type="file"] {
-    padding: 5px;
     font-size: 14px;
 }
 
@@ -532,7 +529,11 @@ button[disabled] {
 }
 
 .profile-info{
-    margin-left: 50px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .profile-content {
@@ -571,13 +572,14 @@ button[disabled] {
 /* Quiz*/
 .quiz-container {
     color: F7F7F7;
-    position:relative; /* Agar bisa mengatur posisi absolut jika diperlukan */
-    align-items: start;
+    position:relative;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:center;
     text-align: center;
     background-color: #F6F6F6;
     width: 100%;
+    padding: 20px;
 }
 
 /* Sidebar (Timer and Question Numbers) */
@@ -590,7 +592,7 @@ button[disabled] {
     flex-direction: column;
     align-items:center;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .sidebar.listen {
@@ -755,9 +757,10 @@ button[disabled] {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: white;
-    margin: 20px;
+    margin: 100px, 20px, 20px;
+    border-radius: 8px;
 }
 
 .progress-bar {
@@ -787,7 +790,7 @@ button[disabled] {
   cursor: pointer;
   display: inline-flex;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
@@ -844,7 +847,6 @@ button[disabled] {
     font-family: 'Assistant', sans-serif;
     margin-left: 5px; /* Jika teks dibungkus dalam elemen span */
     font-weight: bold;
-    font-size: 14px;
 }
 
 
@@ -1133,13 +1135,16 @@ button[disabled] {
     }
 
     .profile-container{
-        margin-top: 70px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 90px 10px 10px;
     }
 
     .profile-container h2{
         font-size: 30px;
+    }
+
+    .profile-info{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .profile-content p {
@@ -1148,6 +1153,23 @@ button[disabled] {
     
     .profile-content span {
         font-size: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .form-group input[type="file"]{
+        font-size: 12px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        font-size: 12px;
+    }
+    
+    .form-group small {
+        font-size: 10px;
     }
 
     .header h1, .header-home h1{
@@ -1202,8 +1224,7 @@ button[disabled] {
     }
 
     .card-image {
-        width: 100px;
-        height: auto;
+        display: none;
     }
 
     .card-content h3 {
@@ -1211,10 +1232,79 @@ button[disabled] {
     }
     
     .card-content p {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .card-container h2{
         font-size: 35px;
+    }
+
+    .quiz-container {
+        flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar {
+        justify-content: center;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+
+    .main-content {
+        width: 100%;
+        /* padding: 40px, 20px; */
+    }
+
+    .question-numbers .button {
+        font-size: 10px;
+        padding: 7px 12px;
+    }
+
+    .question-numbers {
+        gap: 2px;
+        padding-top: 0px;
+    }
+
+    .timer {
+        margin-bottom: 20px;
+    }
+
+    .question-text p {
+        font-size: 15px;
+    }
+
+    .question-text p {
+        font-size: 17px;
+    }
+
+    .feedback-wrapper {
+        padding-top: 10px;
+    }
+
+    .question-header {
+        font-size: 17px;
+    }
+
+    .soal{
+        flex-direction: column;
+    }
+
+    .listen-btn {
+        font-size: 12px;
+        padding: calc(.300rem - 1px) calc(0.8rem - 1px);
+    }
+
+    .answer-box-container {
+        gap: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .answer-box {
+        margin: 1px;
     }
 }

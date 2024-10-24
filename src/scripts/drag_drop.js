@@ -6,6 +6,34 @@ document.querySelectorAll('.answer').forEach(answer => {
     answer.addEventListener('dragstart', function(e) {
         e.dataTransfer.setData('text/plain', e.target.id);  // Set the id of the answer being dragged
     });
+
+    // Touch start for mobile
+    answer.addEventListener('touchstart', (event) => {
+        event.target.style.opacity = '0.5';
+    });
+
+    // Move element on touch move
+    answer.addEventListener('touchmove', (event) => {
+        const touchLocation = event.targetTouches[0];
+        answer.style.position = 'absolute';
+        answer.style.left = `${touchLocation.pageX}px`;
+        answer.style.top = `${touchLocation.pageY}px`;
+    });
+
+    // Handle touch end (drop) for mobile
+    answer.addEventListener('touchend', (event) => {
+        const touchLocation = event.changedTouches[0];
+        const elementUnderTouch = document.elementFromPoint(touchLocation.clientX, touchLocation.clientY);
+
+        if (elementUnderTouch.classList.contains('answer-box') && elementUnderTouch.innerHTML === "") {
+            elementUnderTouch.appendChild(event.target);
+            event.target.style.position = 'static';
+            event.target.style.opacity = '1';
+        } else {
+            event.target.style.position = 'static';
+            event.target.style.opacity = '1';
+        }
+    });
 });
 
 // Add event listeners to all answer boxes to allow drop
@@ -44,8 +72,8 @@ function enableClickToReturn(answerElement, answerBox) {
         originalAnswerOptions.appendChild(answerElement);  // Move the answer back to original container
 
         // Reset the size of the answer-box to default after the answer is removed
-        answerBox.style.width = '100px';  // Reset to default width
-        answerBox.style.height = '50px';  // Reset to default height
+        answerBox.style.width = '100px'; 
+        answerBox.style.height = '50px'; 
 
         // Remove any event listener for returning back
         answerElement.removeEventListener('click', arguments.callee);  
@@ -72,3 +100,4 @@ function undoLastMove() {
 
 // Allow undo with the 'Undo' button
 document.querySelector('.btn.undo').addEventListener('click', undoLastMove);
+
