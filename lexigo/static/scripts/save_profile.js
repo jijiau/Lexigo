@@ -1,10 +1,10 @@
 // Event listener untuk mengganti gambar profil saat file diunggah
-document.getElementById('profile-Image').addEventListener('change', function(e) {
+document.getElementById('profile-picture').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function(event) {
-            document.getElementById('profile-Image').src = event.target.result;
+            document.getElementById('profile-picture').src = event.target.result;
             document.getElementById('file-status').innerText = file.name;
         };
         reader.readAsDataURL(file);
@@ -16,7 +16,7 @@ function saveProfile() {
     const name = document.getElementById('name').value;
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
-    const profileImageSrc = document.getElementById('profile-Image').src;
+    const profileImageSrc = document.getElementById('profile-picture').src;
 
 
     // Validasi: Jika ada yang kosong, tampilkan pesan peringatan

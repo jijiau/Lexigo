@@ -64,12 +64,16 @@ def delete_account(request):
 
 @login_required
 def edit_profile_view(request):
+    print("request:", request.method)
     profile, created = Profile.objects.get_or_create(user=request.user)
-
     if request.method == 'POST':
         profile_form = ProfileForm(request.POST, request.FILES, instance=profile)
         user_form = CustomUserForm(request.POST, instance=request.user)
         password_form = CustomPasswordChangeForm(user=request.user, data=request.POST)
+
+        print(f"user form: {user_form}")
+
+        print(f"profile valid: {profile_form.is_valid()} and user valid: {user_form.is_valid()}")
 
         if profile_form.is_valid() and user_form.is_valid():
             profile_form.save()
@@ -99,8 +103,8 @@ def view_profile_view(request):
     profile, created = Profile.objects.get_or_create(user=request.user)
     return render(request, 'view_profile.html', {'profile': profile})
 
-def edit_profile_view(request):
-    return render(request, 'edit_profile.html')
+# def edit_profile_view(request):
+#     return render(request, 'edit_profile.html')
 
 def learn_read_view(request):
     return render(request, 'learn_read.html')

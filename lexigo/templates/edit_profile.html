@@ -30,10 +30,10 @@
     <!-- Profile Form -->
     <main class="profile-container">
         <h2>Profile Settings</h2>
-
+    
         <form class="profile-form" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-
+    
             <!-- Profile Picture Upload -->
             <div class="form-group">
                 <label for="profile-picture">Profile Picture</label>
@@ -41,29 +41,29 @@
                 {{ profile_form.profile_image }}
                 <small>Maximum image size is 1 MB</small>
             </div>
-
+    
             <!-- Username Input -->
             <div class="form-group">
                 <label for="username">Username</label>
-                {{ user_form.username }}
+                <input type="text" id="username" name="username" value="{{ user_form.username.value }}" placeholder="Enter your username">
             </div>
-
+    
             <!-- Email Input -->
             <div class="form-group">
                 <label for="email">Email</label>
-                {{ user_form.email }}
+                <input type="text" id="email" name="email" value="{{ user_form.email.value }}" placeholder="Enter your email">
             </div>
-
+    
             <!-- Password Update -->
             <div class="form-group">
-                <label for="password">New Password</label>
-                {{ password_form.new_password1 }}
+                <label for="new_password1">New Password</label>
+                <input type="password" id="new_password1" name="new_password1" placeholder="Enter new password">
             </div>
             <div class="form-group">
-                <label for="password-confirm">Confirm New Password</label>
-                {{ password_form.new_password2 }}
+                <label for="new_password2">Confirm New Password</label>
+                <input type="password" id="new_password2" name="new_password2" placeholder="Confirm new password">
             </div>
-
+    
             <!-- Save Changes and Cancel Buttons -->
             <div class="form-actions">
                 <button type="submit" class="btn">Save Changes</button>
@@ -71,6 +71,7 @@
             </div>
         </form>
     </main>
+    
 
     <script src="{% static 'scripts/save_profile.js' %}"></script>
 </body>
