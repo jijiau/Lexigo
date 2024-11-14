@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill The Blank Space</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Sidebar dengan Timer dan Question Numbers -->
+        <span class="sidebar">
+            <div class="timer">
+                <p>Remaining Time</p>
+                <h1>00:20:35</h1>
+            </div>
+            <div class="question-numbers">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">4</button>
+                <button class="button wrong">5</button>
+                <button class="button">6</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button current">10</button>
+            </div>
+        </span>
+
+        <!-- Main Content for Question and Answer -->
+        <div class="main-content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <div class="question-header">
+                <h2>Drag & Drop To Arrange The Words!</h2>
+            </div>
+
+            <!-- Listening Button -->
+            <div class="soal">
+                <div class="hiasan">
+                    <img src="../../assets/conversation-question.svg" alt="gambar orang">
+                </div>
+                <button class="listen-btn">
+                    <img src="../../assets/speaker-icon.svg" alt="Listen Icon">
+                    <span>Listen carefully...</span>
+                </button>
+            </div>
+
+            <!-- Add Audio Element -->
+            <audio id="audioElement" src="../../assets/The-Audio.mp3"></audio>
+
+            <!-- Question Text -->
+            <div class="question-text listening">
+                <div class="answer-box-container">
+                    <div class="answer-box" id="answer-box-1"></div>
+                    <div class="answer-box" id="answer-box-2"></div>
+                    <div class="answer-box" id="answer-box-3"></div>
+                    <div class="answer-box" id="answer-box-4"></div>
+                    <div class="answer-box" id="answer-box-5"></div>
+                </div>
+            </div>
+            
+            <!-- Container to show the correct answer -->
+            <div id="correct-answer-container" style="display: none; color: #58CC02; font-weight: bold; margin-bottom: 50px; margin-top: 5px;"></div>
+
+            <div class="answer-options Listening">
+                <button class="answer common-answer-style" draggable="true" id="answer1">
+                    my
+                </button>
+                <button class="answer common-answer-style" draggable="true" id="answer2">
+                    years
+                </button>
+                <button class="answer common-answer-style" draggable="true" id="answer3">
+                    is
+                </button>
+                <button class="answer common-answer-style" draggable="true" id="answer4">
+                    mom
+                </button>
+                <button class="answer common-answer-style" draggable="true" id="answer5">
+                    forty eight
+                </button>
+            </div>
+            
+
+            <!-- Navigation Buttons -->
+            <div class="navigation">
+                <button class="btn skip">Skip</button>
+                <button class="btn check">Check</button>
+            </div>
+        </div>
+        <div class="feedback-container" id="feedback" style="display: none;">
+            <div class="feedback-wrapper">
+                <div class="feedback-content">
+                    <div class="feedback-icon"></div>
+                    <div class="feedback-message">
+                        <p class="feedback-text"></p>
+                        <p class="report">Report</p>
+                    </div>
+                </div>
+                <a href="home.html" class="btn continue" onclick="continueQuiz()">Finish</a>
+            </div>
+        </div>      
+    </div>
+    
+    <!-- Panggil file JavaScript untuk menjalankan fungsi drag & drop serta pemutaran audio -->
+    <script src="../scripts/drag_drop.js"></script>
+    <script src="../scripts/check_listen.js"></script>
+    <script src="../scripts/play_audio.js"></script>
+</body>
+</html>
+    

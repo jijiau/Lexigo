@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header-home">
+        <div class="logo-home">
+            <img src="../../assets/star-logo.gif" alt="logo">
+            <h1>Lexigo</h1>
+        </div>
+        <nav>
+            <a href="../../index.html">
+                <img src="../../assets/home-icon.svg" alt="Landing Icon">
+                Landing
+            </a>
+            <a href="home.html">
+                <img src="../../assets/learn-icon.svg" alt="Home Icon">
+                Home
+            </a>
+            <a href="view_profile.html">
+                <img src="../../assets/prof-icon.svg" alt="Profile Icon">
+                Profile
+            </a>
+        </nav>
+    </header>
+
+    <!-- Kotak Profile -->
+    <main class="profile-container">
+        <h2>My Profile</h2>
+
+        <!-- Tempat untuk menampilkan gambar profil -->
+        <div class="profile-image-container">
+            <img src="../../assets/star.png" class ="bintang">
+            <img id="profileImage" src="default-profile.png" alt="Profile Image">
+            <img src="../../assets/star-flipped.png" class ="bintang">
+        </div>
+
+        <!-- Display Profile Information -->
+        <div class="profile-info">
+                <div class="profile-content">
+                    <p><strong>Name:</strong></p>
+                    <span id="display-name"></span> 
+                </div>
+                
+                <div class="profile-content">
+                    <p><strong>Username:</strong></p>
+                    <span id="display-username"></span>
+                </div>
+                
+                <div class="profile-content">
+                    <p><strong>Email:</strong></p>
+                    <span id="display-email"></span>
+                </div>
+        </div>
+
+        <!-- Tombol edit profil -->
+        <div class="profile-actions">
+            <a href="edit_profile.html">
+                <button type="button" id="edit" class="btn">Edit Profil</button>
+            </a>
+        </div>
+
+        <!-- Logout dan Delete Account -->
+        <div class="form-actions">
+            <a href="auth.html">
+                <button type="button" class="logout">Logout</button>
+            </a>
+            <a href="auth.html">
+                <button type="button" class="delete-account">Delete My Account</button>
+            </a>      
+        </div>
+    </main>
+
+    <!-- Panggil JavaScript untuk menampilkan data dari localStorage-->
+    <script src="../scripts/view_profile.js"></script>
+</body>
+</html>
