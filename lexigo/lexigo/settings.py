@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 
 CSRF_COOKIE_SECURE = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
 
 SITE_ID = 1
 
