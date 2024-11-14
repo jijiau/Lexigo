@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexigo - Edit Profile</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-home">
+        <div class="logo-home">
+            <img src="{% static 'assets/star-logo.gif' %}" alt="logo">
+            <h1>Lexigo</h1>
+        </div>
+        <nav>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'assets/home-icon.svg' %}" alt="Home Icon"> Landing
+            </a>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'assets/learn-icon.svg' %}" alt="Home Icon"> Home
+            </a>
+            <a href="{% url 'view_profile' %}">
+                <img src="{% static 'assets/prof-icon.svg' %}" alt="Profile Icon"> Profile
+            </a>
+        </nav>
+    </header>
+
+    <!-- Profile Form -->
+    <main class="profile-container">
+        <h2>Profile Settings</h2>
+
+        <form class="profile-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <!-- Profile Picture Upload -->
+            <div class="form-group">
+                <label for="profile-picture">Profile Picture</label>
+                <input type="file" id="profile-picture" name="profile_image" accept="image/*">
+                {{ profile_form.profile_image }}
+                <small>Maximum image size is 1 MB</small>
+            </div>
+
+            <!-- Username Input -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{ user_form.username }}
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                {{ user_form.email }}
+            </div>
+
+            <!-- Password Update -->
+            <div class="form-group">
+                <label for="password">New Password</label>
+                {{ password_form.new_password1 }}
+            </div>
+            <div class="form-group">
+                <label for="password-confirm">Confirm New Password</label>
+                {{ password_form.new_password2 }}
+            </div>
+
+            <!-- Save Changes and Cancel Buttons -->
+            <div class="form-actions">
+                <button type="submit" class="btn">Save Changes</button>
+                <a class="btn skip" href="{% url 'view_profile' %}">Cancel Changes</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="{% static 'scripts/save_profile.js' %}"></script>
+</body>
+</html>

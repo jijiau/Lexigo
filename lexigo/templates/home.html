@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexigo - Home</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <!-- header -->
+    <header class="header-home">
+        <div class="logo-home">
+            <img src="{% static 'assets/star-logo.gif' %}" alt="logo">
+            <h1>Lexigo</h1>
+        </div>
+        <nav>
+            <a href="{% url 'home' %}"> <!-- Ganti 'landing_page' dengan URL name yang sesuai -->
+                <img src="{% static 'assets/home-icon.svg' %}" alt="Home Icon">
+                Landing
+            </a>
+            <a href="{% url 'view_profile' %}"> <!-- Ganti 'view_profile' dengan URL name yang sesuai -->
+                <img src="{% static 'assets/prof-icon.svg' %}" alt="Profile Icon">
+                Profile
+            </a>
+        </nav>
+    </header>
+    
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- Tombol Latihan -->
+        <div class="card-container">
+            <h2>Let's Practice!</h2>
+
+            <!-- Pilihan latihan reading -->
+            <div class="card-wrapper">
+                <div class="card card-green">
+                    <div class="card-checkbox">
+                        <input type="checkbox" id="read-checkbox">
+                    </div>
+                    <div class="card-content">
+                        <h3>Read</h3>
+                        <p>Let's learn by answering questions based on the text provided.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'learn_read' %}"> <!-- Ganti 'learn_read' dengan URL name yang sesuai -->
+                            <img src="{% static 'assets/btn-read.svg' %}" alt="Read Button Icon">
+                        </a>
+                    </div>
+                </div>
+                <img class="card-image" src="{% static 'assets/Read-icon.svg' %}" alt="Read Icon">
+            </div>
+
+            <!-- Pilihan latihan listening -->
+            <div class="card-wrapper">
+                <img class="card-image" src="{% static 'assets/Listen-icon.svg' %}" alt="Listen Icon">
+                <div class="card card-yellow">
+                    <div class="card-checkbox">
+                        <input type="checkbox" id="listen-checkbox">
+                    </div>
+                    <div class="card-content">
+                        <h3>Listening</h3>
+                        <p>Arrange the words based on what you hear.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'learn_listen' %}"> <!-- Ganti 'learn_listen' dengan URL name yang sesuai -->
+                            <img src="{% static 'assets/btn-list.svg' %}" alt="Listen Button Icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

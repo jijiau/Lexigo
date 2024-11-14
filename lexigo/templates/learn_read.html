@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <span class="sidebar">
+            <div class="timer">
+                <p>Remaining Time</p>
+                <h1>00:20:35</h1>
+            </div>
+            <div class="question-numbers">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">4</button>
+                <button class="button wrong">5</button>
+                <button class="button">6</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button current">10</button>
+            </div>
+        </span>
+
+        <!-- Main Content untuk Question and Answers -->
+        <span class="main-content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <div class="question-text">
+                <p>
+                    People made the earliest textiles for clothing and dwellings. Then textiles became a necessary article of commerce and trade among the peoples of the world. The trade grew and flourished - from China through India, over the Arabian desert to the ports of Egypt and Turkey, and across the Mediterranean Sea to Italy. Caravans took beautiful silk brocades, cotton calicoes, gauzes, and the fine linens to Europe. Local artisans learned how to make them.
+                </p>
+                <h2>The text as a whole tells us about ...</h2>
+            </div>
+
+            <!-- Opsi Jawaban -->
+            <div class="answer-options">
+                <button class="answer">
+                    <span class="letter" data-correct="true">A</span>
+                    the earliest textiles
+                </button>
+                <button class="answer">
+                    <span class="letter">B</span>   
+                    how textiles were made
+                </button>
+                <button class="answer">
+                    <span class="letter">C</span>
+                    the machines for making textiles
+                </button>
+                <button class="answer">
+                    <span class="letter">D</span>
+                    the development of the textile industry
+                </button>
+                <button class="answer">
+                    <span class="letter">E</span>
+                    the textile industry after the Industrial Revolution
+                </button>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div class="navigation">
+                <button class="btn skip">Skip</button>
+                <button class="btn check">Check</button>
+            </div>
+        </span>
+
+        <!-- Footer for Feedback (initially hidden) -->
+        <div class="feedback-container" id="feedback" style="display: none;">
+            <div class="feedback-wrapper">
+                <div class="feedback-content">
+                    <div class="feedback-icon">
+                        <!-- Ikon akan secara dinamis masuk ke bagian ini -->
+                    </div>
+                    <div class="feedback-message">
+                        <p class="feedback-text"></p> 
+                        <p class="report">Report</p>
+                    </div>
+                </div>
+                <a href="home.html" class="btn continue" onclick="continueQuiz()">Finish</a> <!-- Continue button -->
+            </div>
+        </div>   
+        
+    </div>  
+
+    <!-- Panggil file JavaScript untuk melakukan validasi jawaban -->
+    <script src="../scripts/click_answer.js"></script>
+    <script src="../scripts/check_answer.js"></script>
+</body>
+</html>

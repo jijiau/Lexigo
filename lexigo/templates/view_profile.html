@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-home">
+        <div class="logo-home">
+            <img src="{% static 'assets/star-logo.gif' %}" alt="logo">
+            <h1>Lexigo</h1>
+        </div>
+        <nav>
+            <a href="{% url 'home' %}"><img src="{% static 'assets/home-icon.svg' %}" alt="Home Icon">Landing</a>
+            <a href="{% url 'home' %}"><img src="{% static 'assets/learn-icon.svg' %}" alt="Home Icon">Home</a>
+            <a href="{% url 'view_profile' %}"><img src="{% static 'assets/prof-icon.svg' %}" alt="Profile Icon">Profile</a>
+        </nav>
+    </header>
+
+    <!-- Profile Information -->
+    <main class="profile-container">
+        <h2>My Profile</h2>
+
+        <div class="profile-image-container">
+            <img src="{% static 'assets/star.png' %}" class="bintang">
+            <img id="profileImage" 
+                src="{% if user.profile.profile_image %}{{ user.profile.profile_image.url }}{% else %}{% static 'assets/default-profile.png' %}{% endif %}" 
+                alt="Profile Image">
+
+            <img src="{% static 'assets/star-flipped.png' %}" class="bintang">
+        </div>
+
+        <div class="profile-info">
+            <div class="profile-content">
+                <p><strong>Username:</strong></p>
+                <span>{{ user.username }}</span>
+            </div>
+            
+            <div class="profile-content">
+                <p><strong>Email:</strong></p>
+                <span>{{ user.email }}</span>
+            </div>
+        </div>
+
+        <div class="profile-actions">
+            <a href="{% url 'edit_profile' %}">
+                <button type="button" class="btn">Edit Profile</button>
+            </a>
+        </div>
+    </main>
+
+    <script src="{% static 'scripts/view_profile.js' %}"></script>
+</body>
+</html>

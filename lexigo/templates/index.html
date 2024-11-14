@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexigo - Landing Page</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="landing-container">
+        <header class="header">
+            <img src="{% static 'assets/star-logo.gif' %}" alt="logo">
+            <h1>Lexigo</h1>
+        </header>
+        
+        <!-- Container for image, text, and buttons -->
+        <div class="landing-content">
+            <img src="{% static 'assets/Anim_Landingpage.png' %}" alt="Icon" class="left-image">
+            <div class="text-button-container">
+                <h2>An Easy and Fastest Way to Sharpen Your English Skills!</h2>
+                <a href="{% url 'login' %}" class="btn">MULAI BELAJAR</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

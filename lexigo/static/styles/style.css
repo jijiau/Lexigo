@@ -1,0 +1,1302 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Baloo+2:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, a, p {
+    font-family: 'Assistant', sans-serif;
+    color: #4B4B4B;
+    font-size: medium;
+    font-weight: 600;
+    background-image: url("../../assets/titik-titik.svg");
+}
+
+h1, h2 {
+    font-family: 'Baloo 2', cursive;
+}
+
+.header {
+    background-color: #EAAD49;
+    padding: 5px 15px;
+    text-align: left;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.header img{
+    width: 50px;
+    height: auto;
+}
+
+/* LANDING PAGE */
+.landing-container {
+    padding-top: 50px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #003566;
+    background-image: url('../assets/Landingpage.svg');
+    color: white;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.landing-content {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    width: 90%;
+    max-width: 1200px; 
+}
+
+.left-image {
+    width: 500px; 
+    max-width: 100%; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+.text-button-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 10px;
+    width: 55%;
+}
+
+.text-button-container h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+/* HOMEPAGE */
+.header-home {
+    padding-top: 20px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 3px solid #bebebe; 
+    padding-bottom: 20px; 
+    background-color: white;
+}
+
+.logo-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-home img {
+    height: 50px;
+    width: auto;
+}
+
+.header-home h1{
+    font-size: 20px;
+    color: #39B54A;
+}
+
+.messages {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.form-errors {
+    color: red;
+    background-color: #ffeeee;
+    padding: 10px;
+    border: 1px solid red;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding-right: 50px;
+    align-items: center;
+}
+
+nav a {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Baloo 2', cursive;
+    padding: 7px 20px;
+    display: flex; 
+    align-items: center; 
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+nav a:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+nav a img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+/* BUTTON DEFAULT --> Source: https://getcssscan.com/css-buttons-examples */
+.btn {
+    appearance: button;
+    font-family: 'Assistant', sans-serif;
+    width: auto;
+    background-color: #58A700;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.btn:after {
+  background-clip: padding-box;
+  background-color: #58CC02;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+
+.btn:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+
+.btn.submit {
+    width: 100%;
+}
+
+/* CARD READING & LISTENING LAB */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../assets/titik-titik.svg');
+    color: white;
+    width: 130%;
+    padding-left: -50px;
+}
+
+.card-container h2{
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 70px;
+    color: #4B4B4B;
+    margin-top: -100px;
+}
+
+.card {
+    width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.card:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.card-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.card-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.card-green {
+    background-color: #39B54A;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-image {
+    width: 200px;
+    height: 170px;
+}
+
+.card-yellow {
+    background-color: #FFC107;
+}
+
+.card-content h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 30px;
+    margin-bottom: -5px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-content p {
+    font-family: 'Assistant', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.card-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CARD'S START BUTTON */
+.btn-start {
+    background-color: white;
+    color: #39B54A;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.card-action img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-action img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* PROFILE PAGE */
+.profile-container {
+    max-width: 500px;
+    flex-wrap: wrap;
+    margin: 100px auto 0;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(0.1, 0.1, 0.1, 0.1);
+    align-items: center;
+}
+
+.profile-container h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    align-items: center;
+    color: #58CC02;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.profile-image-container {
+    position:relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#profileImage {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #4B4B4B;
+    align-items: center;
+}
+
+.bintang{
+    width: 50px;
+    height: 50px;
+}
+
+.profile-group {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="file"] {
+    margin-top: 1px;
+}
+
+small {
+    margin-top: 5px;
+}
+
+/* input form for EDIT PROFILE PAGE */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-group input[type="file"]{
+    align-items: left;
+    text-align: left;
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    font-family: 'Assistant', sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: #777;
+}
+
+.extra-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.form-actions .btn {
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.form-actions .btn.skip {
+    font-size: 10px;
+    padding: 10px;
+}
+
+.logout {
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-account {
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.logout:hover,
+.delete-account:hover {
+    text-decoration: underline;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Informasi probadi pada VIEW PROFILE PAGE */
+.profile-info{
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.profile-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 20px;
+}
+
+.profile-content p {
+    font-size: 14px;
+}
+
+.profile-content span {
+    font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-actions a {    
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* READING & LISTENING LAB */
+.quiz-container {
+    color: F7F7F7;
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    text-align: center;
+    background-color: #F6F6F6;
+    width: 100%;
+    padding: 20px;
+}
+
+/* BAGIAN SIDEBAR untuk navigasi nomor */
+.sidebar {
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.sidebar.listen {
+    margin: 20px;
+}
+
+.timer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timer p {
+    color: black;
+    font-size: 14px;
+}
+
+.timer h1 {
+    color: #39B54A;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.question-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.question-numbers .button {
+  background-color: #89E219;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.question-numbers .button:hover {
+  background-color: #b7f082;
+}
+
+.question-numbers .button.current {
+    background-color: #b7f082;
+}
+
+.question-numbers .button.wrong {
+    background-color: #FF7676;
+}
+
+.question-numbers .button.wrong:hover,
+.question-numbers .button.wrong:focus {
+  background-color: #ff7676ab;
+}
+
+.question-numbers .button.active {
+    background-color: #FFD700;
+}
+
+.question-numbers .button.active:hover,
+.question-numbers .button.active:focus {
+  background-color: #FFD700ab;
+}
+
+/* FOOTER UNTUK FEEDBACK keterangan benar dan salah */
+.feedback-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    display: flex;
+    padding: 20px;
+    z-index: 999;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #CCFFCC; 
+    transform: translateY(100%); 
+    transition: transform 0.5s ease-in-out;
+}
+
+.feedback-container.active {
+    transform: translateY(0);
+}
+
+.feedback-wrapper {
+    display: flex;
+    padding-top: 25px;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.feedback-content {
+    display: flex;
+    align-items: center;
+}
+
+.feedback-icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.feedback-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center; 
+}
+
+.feedback-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #489D26;
+    margin: 0;
+}
+
+.report {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #489D26;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* NAVIGASI antar nomor soal */
+.btn.continue {
+    font-size: 13px;
+}
+
+.btn.continue:hover {
+    font-size: 13px;
+}
+
+/* LAB yang terdiri atas SIDEBAR dan QUESTIONS */
+.main-content {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    margin: 100px, 20px, 20px;
+    border-radius: 8px;
+}
+
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    background-color: #E5E5E5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 90%;
+    background-color: #00BFFF;
+    border-radius: 4px;
+}
+
+/* TOMBOL LISTENING untuk LISTENING LAB */
+.listen-btn {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.400rem - 1px) calc(1rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.soal {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    align-items: center;
+}
+
+.hiasan img {
+    height: 200px;
+}
+
+.listen-btn:hover,
+.listen-btn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.listen-btn:hover {
+  transform: translateY(-1px);
+}
+
+.listen-btn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.listen-btn img {
+    margin-right: 5px;
+    height: 15px;
+}
+
+.listen-btn span {
+    font-family: 'Assistant', sans-serif;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* BAGIAN PERTANYAAN */
+.question-header{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.question-text {
+    margin-bottom: 20px;
+}
+
+.question-text.listening {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.question-text p{
+    font-family: 'Assistant', sans-serif;
+    text-align: justify;
+    font-size: 17px;
+    font-weight:normal;
+}
+
+.question-text h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+/* BAGIAN JAWABAN */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer {
+    font-family: 'Assistant', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.answer.disabled:hover {
+    background-color: inherit; 
+    cursor: not-allowed; 
+    background-color: #ccc;
+}
+
+.answer .letter {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* TOMBOL JAWABAN */
+.answer.clicked {
+    background-color: #FFC107;
+}
+
+.answer.clicked:hover {
+    background-color: #FFC107;
+}
+
+.answer:hover{
+    background-color: #ffc10760;
+}
+
+.answer-box {
+    border: 2px solid #E5E5E5;
+    min-height: 50px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.answer-box-container {
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;  
+    gap: 5px;  
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* DRAG & DROP STYLE */
+.common-answer-style {
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.answer-options.Listening {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-options.Listening .answer {
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    cursor: grab;
+}
+
+.answer-options.Listening .answer:active {
+    cursor: grabbing;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn.skip:after {
+    background-color: white;
+    border-color: #333;
+}
+
+.btn.skip{
+    color: black;
+    font-size: 12px;
+}
+
+.btn.check{
+    font-size: 12px;
+}
+
+/* LOGIN PAGE */
+.login-box {
+    background-color: #003566;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    text-align: center;
+    color: #FFF8C6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 35px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    align-items: center;   
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.forgot-password {
+    font-family: 'Assistant', sans-serif;
+    color: white;
+    font-size: 14px;
+    cursor: default;
+    text-decoration: none;
+    padding-bottom: 5px;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.tombol-sign-in {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-sign-in {
+    font-family: 'Assistant', sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer; 
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.google-sign-in img {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px; 
+}
+
+.register-link {
+    font-family: 'Assistant', sans-serif;
+    color: #39B54A;
+    font-weight: bold;
+    font: 0.5em;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+    .header img, .header-home img{
+        height: 30px;
+        width: auto;
+        margin-left: 0px;
+    }
+
+    .landing-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo-home {
+        margin-left: -30px;
+    }
+
+    .profile-container{
+        margin: 90px 10px 10px;
+    }
+
+    .profile-container h2{
+        font-size: 30px;
+    }
+
+    .profile-info{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .profile-content p {
+        font-size: 10px;
+    }
+    
+    .profile-content span {
+        font-size: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .form-group input[type="file"]{
+        font-size: 12px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        font-size: 12px;
+    }
+    
+    .form-group small {
+        font-size: 10px;
+    }
+
+    .header h1, .header-home h1{
+        font-size: 17px;
+    }
+
+    .text-button-container h2 {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .text-button-container .btn, .profile-actions .btn{
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    nav a {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    nav a img{
+        height: 1px;
+        width: auto;
+        margin-left: 0px;
+    }
+
+    .login-box {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    #sign-in-btn{
+        width: 60%;
+    }
+
+    .google-sign-in {
+        width: 60%;
+        font-size: 0.8em;
+    }
+
+    .card-wrapper {
+        margin-left: 1px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .card-image {
+        display: none;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+    
+    .card-content p {
+        font-size: 10px;
+    }
+
+    .card-container h2{
+        font-size: 35px;
+    }
+
+    .quiz-container {
+        flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar {
+        justify-content: center;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .question-numbers .button {
+        font-size: 10px;
+        padding: 7px 12px;
+    }
+
+    .question-numbers {
+        gap: 2px;
+        padding-top: 0px;
+    }
+
+    .timer {
+        margin-bottom: 20px;
+    }
+
+    .question-text p {
+        font-size: 15px;
+    }
+
+    .question-text p {
+        font-size: 17px;
+    }
+
+    .feedback-wrapper {
+        padding-top: 10px;
+    }
+
+    .question-header {
+        font-size: 17px;
+    }
+
+    .soal{
+        flex-direction: column;
+    }
+
+    .listen-btn {
+        font-size: 12px;
+        padding: calc(.300rem - 1px) calc(0.8rem - 1px);
+    }
+
+    .answer-box-container {
+        gap: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .answer-box {
+        margin: 1px;
+    }
+}
